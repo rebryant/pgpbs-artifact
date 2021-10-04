@@ -4,11 +4,15 @@ mismatched set sizes.
 1. Benchmarks:
 
 mchess-board-N_shuf.cnf:
-	The NxN mutilated chessboard.
+	The NxN mutilated chessboard.  Attempt to cover a chessboard
+	with dominos, except that two opposite corners have been
+	removed, and so there's a mismatch between the number of white
+	and black squares
 
 mchess-torus-N_shuf.cnf:
-	Defined over a torus, with the edges of the board wrapping
-	around for both top-bottom and left-right
+	Like the mutilated chessboard problem, but defined over a
+	torus, with the edges of the board wrapping around for both
+	top-bottom and left-right
 
 randomG-XXXX-nN-d05_shuf.cnf
 	Attempt to find perfect mapping in a random N X (N+1) bipartite
