@@ -38,9 +38,10 @@ Once downloaded, the two demonstrations can be run as:
 
 For all sets of benchmarks, a lot of stuff gets printed, but the final
 summary information is saved in files cardinality-results.txt and
-parity-results.txt in the top-level directory.  See the included file
-"artifact-documentation.pdf" for more information about the benchmarks
-and how to interpret the results.
+parity-results.txt in the top-level directory.  More information about
+the benchmarks is included in the README files for the two benchmark
+classes.  See the included file "artifact-documentation.pdf" for more
+information about the benchmarks and how to interpret the results.
 
 3. Makefile options:
 
