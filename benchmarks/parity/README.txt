@@ -5,11 +5,19 @@ mismatched formulas computing the parity of a set of values.
 
 urquhart-li-M_shuf.cnf
 	Li's implementation of benchmark problem defined by Urquhart.
-	Defined over a M^2 X M^2 bipartite graph
+	Defined over a M^2 X M^2 bipartite graph.  This problem
+	is notoriously difficult for most SAT solvers.  We know
+	of no solver, other than ours, that can generate proofs
+	for even the smallest (M=3) instance.  Both PGBDD and PGPBS
+	can handle them easily.
 
 tseitingrid-N_shuf.cnf
-	Ellfer's Tseitin grid formula.  Defined over a grid graph with
-	N rows and 7 columns
+	Ellfer's Tseitin grid formula, introduced for the 2016 SAT
+	competition.  Defined over a grid graph with N rows and 7
+	columns.  The smaller versions of these were used in the 2020
+	SAT competition.  None of the entrants could generate proofs
+	within the 5000s time limit.  Both PGBDD and PGBPBS can handle
+	them easily.
 
 
 2. Make options
