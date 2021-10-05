@@ -5,7 +5,7 @@ FORMATTER = $(INTERP) $(FDIR)/formatter.py
 run:
 	cd cardinality; make run
 	cd parity; make run
-	$(FORMATTER) {cardinality,parity}/*.data > results-pgpbs.txt
+	$(FORMATTER) */*.data > results-pgpbs.txt
 
 run-pgbdd:
 	cd parity; make run-pgbdd
