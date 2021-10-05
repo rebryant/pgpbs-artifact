@@ -9,7 +9,7 @@ run:
 
 run-pgbdd:
 	cd parity; make run-pgbdd
-	$(FORMATTER) parity/*.data > results-pgbdd.txt
+	$(FORMATTER) parity/*.pdata > results-pgbdd.txt
 
 test:
 	cd cardinality; make test
