@@ -228,6 +228,9 @@ int parseLine (FILE* file, int mode) {
   }
   return 0; }
 
+int return_code = 0;
+char *return_string = NULL;
+
 int main (int argc, char** argv) {
   if (argc != 3)
      usage(argv[0]);
@@ -244,9 +247,9 @@ int main (int argc, char** argv) {
       exit(1);
   }
   for (;;) {
-    (void) fscanf (cnf, " p cnf %i %i ", &nVar, &nCls);
+    return_code = fscanf (cnf, " p cnf %i %i ", &nVar, &nCls);
     if (nVar > 0) break;
-    (void) fgets (ignore, sizeof (ignore), cnf);
+    return_string = fgets (ignore, sizeof (ignore), cnf);
     int j; for (j = 0; j < 1024; j++) { if (ignore[j] == '\n') break; }
     if (j == 1024) {
       printf ("c ERROR: comment longer than 1024 characters: %s\n", ignore); exit (0); } }
