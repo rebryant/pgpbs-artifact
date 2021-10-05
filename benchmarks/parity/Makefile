@@ -44,9 +44,9 @@ parity-results.txt: $(FILES)
 
 parity-results-pgbdd.txt: $(PFILES)
 	echo "PGBDD RESULT SUMMARY"
-	$(FORMATTER) $(FILES)
-	$(FORMATTER) $(FILES) > parity-results-pgbdd.txt
-	echo "PGPDD RESULTS SAVED IN FILE 'parity-results-pgbdd.txt'"
+	$(FORMATTER) $(PFILES)
+	$(FORMATTER) $(PFILES) > parity-results-pgbdd.txt
+	echo "PGBDD RESULTS SAVED IN FILE 'parity-results-pgbdd.txt'"
 
 
 .SUFFIXES: .cnf .data .pdata
