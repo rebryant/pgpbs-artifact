@@ -1,32 +1,32 @@
 install:
-	(pushd lrat; make install)
+	cd lrat; make install
 
 run: install
-	(pushd benchmarks; make run; popd)
+	cd benchmarks; make run
 	cp benchmarks/cardinality/cardinality-results.txt .
 	cp benchmarks/parity/parity-results.txt .
 
 run-pgbdd: install
-	(pushd benchmarks; make run-pgbdd; popd)
+	cd benchmarks; make run-pgbdd
 	cp benchmarks/parity/parity-results-pgbdd.txt .
 
 test: install
-	(pushd benchmarks; make test; popd)
+	cd benchmarks; make test
 
 test-pgbdd: install
-	(pushd benchmarks; make test-pgbdd; popd)
+	cd benchmarks; make test-pgbdd
 
 clean:
-	(pushd benchmarks; make clean; popd)
-	(pushd lrat; make clean; popd)
-	(pushd src; make clean; popd)
+	cd benchmarks; make clean
+	cd lrat; make clean
+	cd src; make clean
 	rm -f *~	
 
 
 superclean:
-	(pushd benchmarks; make superclean; popd)
-	(pushd lrat; make clean; popd)
-	(pushd src; make clean; popd)
+	cd benchmarks; make superclean
+	cd lrat; make clean
+	cd src; make clean
 	rm -f *~	
 
 

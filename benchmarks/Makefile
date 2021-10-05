@@ -1,25 +1,25 @@
 run:
-	(pushd cardinality; make run; popd)
-	(pushd parity; make run; popd)
+	cd cardinality; make run
+	cd parity; make run
 
 run-pgbdd:
-	(pushd parity; make run-pgbdd; popd)
+	cd parity; make run-pgbdd
 
 test:
-	(pushd cardinality; make test; popd)
-	(pushd parity; make test; popd)
+	cd cardinality; make test
+	cd parity; make test
 
 test-pgbdd:
-	(pushd parity; make test-pgbdd; popd)
+	cd parity; make test-pgbdd
 
 clean:
-	(pushd cardinality; make clean; popd)
-	(pushd parity; make clean; popd)
+	cd cardinality; make clean
+	cd parity; make clean
 	rm -f *~
 
 superclean:
-	(pushd cardinality; make superclean; popd)
-	(pushd parity; make superclean; popd)
+	cd cardinality; make superclean
+	cd parity; make superclean
 	rm -f *~
 
 
