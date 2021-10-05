@@ -80,7 +80,15 @@ def getField(s, id):
 def justifyRight(s, width):
     right = padding//2
     left = (padding-right) + width-len(s)
-    if left > 0:
+    if left > 0 and right > 0:
+        return (" " * left) + s + (" " * right)
+    else:
+        return s
+
+def justifyLeft(s, width):
+    left = padding - padding//2
+    right = (padding-left) + width-len(s)
+    if left > 0 and right > 0:
         return (" " * left) + s + (" " * right)
     else:
         return s
@@ -140,6 +148,8 @@ def formatData(fnames):
             field = itemLists[idx][lidx]
             if lidx <= 1:
                 field = justifyCenter(field, widths[idx])
+            elif idx == 0:
+                field = justifyLeft(field, widths[idx])                
             else:
                 field = justifyRight(field, widths[idx])
             line += field

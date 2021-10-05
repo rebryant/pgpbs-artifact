@@ -13,8 +13,8 @@ SOLVER = $(INTERP) $(SDIR)/$(SNAME)
 CHECKER = $(LDIR)/lrat-check
 FORMATTER = $(INTERP) $(FDIR)/formatter.py
 
-CBFILES = mchess-board-24_shuf.data  mchess-board-32_shuf.data
-CTFILES = mchess-torus-24_shuf.data  mchess-torus-32_shuf.data
+CBFILES = mchess-board-24_shuf.data
+CTFILES = mchess-torus-24_shuf.data
 PFILES = pigeon-sinz-16_shuf.data pigeon-direct-16_shuf.data
 RFILES = randomG-B-mix-n19-d05_shuf.data randomG-n20-d05_shuf.data
 FILES = $(CBFILES) $(CTFILES) $(PFILES) $(RFILES) 
@@ -43,7 +43,7 @@ clean:
 	rm -f *~ *.schedule *.lrat
 
 superclean: clean
-	rm -f *.data *.txt
+	rm -f *.data *results.txt
 
 
 

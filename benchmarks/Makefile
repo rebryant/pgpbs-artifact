@@ -1,9 +1,15 @@
+INTERP=python3
+FDIR = ../src
+FORMATTER = $(INTERP) $(FDIR)/formatter.py
+
 run:
 	cd cardinality; make run
 	cd parity; make run
+	$(FORMATTER) {cardinality,parity}/*.data > results-pgpbs.txt
 
 run-pgbdd:
 	cd parity; make run-pgbdd
+	$(FORMATTER) parity/*.data > results-pgbdd.txt
 
 test:
 	cd cardinality; make test
@@ -20,6 +26,6 @@ clean:
 superclean:
 	cd cardinality; make superclean
 	cd parity; make superclean
-	rm -f *~
+	rm -f *~ *.txt
 
 

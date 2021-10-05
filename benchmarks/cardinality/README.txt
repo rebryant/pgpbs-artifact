@@ -1,10 +1,11 @@
 This directory contains unsatisfiable benchmark problems based on
-mismatched set sizes.
+mismatched set sizes.  All have been processed with the program
+scranfilize to randomize the ordering of variables and clauses.
 
 1. Benchmarks:
 
-mchess-board-N_shuf.cnf:
-	The NxN mutilated chessboard.  Attempt to cover a chessboard
+mchess-board-24_shuf.cnf:
+	The 24x24 mutilated chessboard.  Attempt to cover a chessboard
 	with dominos, except that two opposite corners have been
 	removed, and so there's a mismatch between the number of white
 	and black squares.  This is a classic challenge problem for
@@ -13,7 +14,7 @@ mchess-board-N_shuf.cnf:
 	can handle it with extensive guidance on variable ordering
 	and scheduling; otherwise it scales exponentially.
 
-mchess-torus-N_shuf.cnf:
+mchess-torus-24_shuf.cnf:
 	Like the mutilated chessboard problem, but defined over a
 	torus, with the edges of the board wrapping around for both
 	top-bottom and left-right.  PGPBS can handle the problem

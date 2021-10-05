@@ -1,5 +1,8 @@
 This directory contains unsatisfiable benchmark problems based on
-mismatched formulas computing the parity of a set of values.
+mismatched formulas computing the parity of a set of values.  All have
+been processed with the program scranfilize to randomize the ordering
+of variables and clauses.
+
 
 1. Benchmarks:
 

@@ -45,20 +45,19 @@ B. Getting the Zip File
    wget http://www.cs.cmu.edu/~bryant/download/pgpbs-artifact.zip
    unzip pgpbs-artifact.zip
 
-Once downloaded, the two demonstrations can be run as:
+Once downloaded, the demonstration can be run as:
 
    cd pgpbs-artifact
    make run
 
 When running the benchmarks, a lot of stuff gets printed, but the
-final summary information is saved in files cardinality-results.txt
-and parity-results.txt in the top-level directory.  More information
-about the benchmarks is included in the README files for the two
-benchmark classes.  See the included file "artifact-documentation.pdf"
-for more information about the benchmarks and how to interpret the
-results.
+final summary information is saved in file results-pgpbs.txt in the
+top-level directory.  More information about the benchmarks is
+included in the README files for the two benchmark classes.  See the
+included file "artifact-documentation.pdf" for more information about
+the benchmarks and how to interpret the results.
 
-3. Makefile options:
+3. Other Makefile options:
 
 install:
   Compiles the LRAT checker.  No other installation steps are
@@ -71,9 +70,10 @@ test:
   each benchmark.
 
 run-pgbdd:
-  The parity problems can be solved using the earlier solver PGBDD.  The
-  performance is not as good as PGPBS, but it's better than that of
-  any other known proof-generating SAT solver.
+  The parity problems can be solved using the earlier solver PGBDD.
+  The performance is not as good as PGPBS, but it's better than that
+  of any other known proof-generating SAT solver.  The results are
+  saved as the file results-pgbdd.txt.
 
 test-pgbdd:
   Run simple examples with PGBDD
