@@ -37,12 +37,12 @@ pigeon-sinz-16_shuf.cnf:
 
 randomG-XXXX-nN-d05_shuf.cnf
 	Attempt to find perfect matchings in a random N X (N+1)
-	bipartite graph with 50% density.  These are from a set of
-	benchmarks in the 2021 SAT competition.  None of the entrants
-	could generate a proof for these particular benchmarks within
-	the 5000s time limit.  PGPBS handles them easily.  PGBDD could
-	do so with extensive guidance from the user; otherwise it
-	scales exponentialy
+	bipartite graph with 50% density for N=19,20.  These are from
+	a set of benchmarks in the 2021 SAT competition.  None of the
+	entrants could generate a proof for these particular
+	benchmarks within the 5000s time limit.  PGPBS handles them
+	easily.  PGBDD could do so with extensive guidance from the
+	user; otherwise it scales exponentialy
 
 2. Make options
 
