@@ -11,17 +11,26 @@ PGPBS's advantages over PGBDD include:
     the variables and the clauses.
   * It runs faster
     
+PGPBS is aided by two included pseudo-Boolean constraint extraction
+programs: xor_extractor and constraint_extractor.  These programs use
+heuristic methods to detect exclusive-or/nor and cardinality
+constraints encoded as clauses in the input file and provide this
+information to PGPBS.  They are automatically invoked when running the
+benchmarks.
+
 The archive includes the capability to run two classes of benchmarks:
-  * Parity problems: Based on exclusive-or operations
   * Cardinality problems: Based on constraints among mismatched sets
+  * Parity problems: Based on exclusive-or operations
 
 All benchmark problems are unsatisfiable.  The task is to generate a
 proof of unsatisfiability.  Among all existing proof-generating SAT
-solvers that we know, only PGPBS (and possibly PGBDD) can generate an
-unsatisfiability proof for any of these benchmarks within a reasonable
-amount of effort (less than 5000 seconds and generating a proof with
-less than 100 million clauses).
-
+solvers that we know, only PGPBS can generate an unsatisfiability
+proof for any of the cardinality benchmarks with a reasonable amount
+of effort (less than 5000 seconds and generating a proof with less
+than 100 million clauses).  Only three solvers, all based on BDDs, can
+generate an unsatisfiability proof for any of the parity benchmarks.
+These are: PGPBS, PGBDD, and EBDDRES (developed by Jussila, Sinz, and
+Biere in 2006.)  Of these, PGPBS generates the shortest proofs.
 
 1. System Requirements (Tested with TACAS virtual environment)
 
@@ -72,8 +81,10 @@ test:
 run-pgbdd:
   The parity problems can be solved using the earlier solver PGBDD.
   The performance is not as good as PGPBS, but it's better than that
-  of any other known proof-generating SAT solver.  The results are
-  saved as the file results-pgbdd.txt.
+  of any other known proof-generating SAT solver The results are saved
+  as the file results-pgbdd.txt.  The earlier solver EBDDRES should
+  have performance comparable to PGBDD, in terms of proof length, on
+  these benchmarks.
 
 test-pgbdd:
   Run simple examples with PGBDD

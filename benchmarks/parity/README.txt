@@ -14,8 +14,8 @@ urquhart-li-M_shuf.cnf
 	for even the smallest (M=3) instance.  Both PGBDD and PGPBS
 	can handle them easily.
 
-tseitingrid-N_shuf.cnf
-	Ellfer's Tseitin grid formula, introduced for the 2016 SAT
+tseitingrid-7xN_shuf.cnf
+	Elffer's Tseitin grid formula, introduced for the 2016 SAT
 	competition.  Defined over a grid graph with N rows and 7
 	columns.  The smaller versions of these were used in the 2020
 	SAT competition.  None of the entrants could generate proofs
