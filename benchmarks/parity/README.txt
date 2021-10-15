@@ -8,7 +8,7 @@ of variables and clauses.
 
 urquhart-li-M_shuf.cnf
 	Li's implementation of benchmark problem defined by Urquhart.
-	Defined over a M^2 X M^2 bipartite graph, for M=3,6,9.  This
+	Defined over a M^2 X M^2 bipartite graph, for M=3,12.  This
 	problem is notoriously difficult for most SAT solvers.  We
 	know of no solver, other than ours, that can generate proofs
 	for even the smallest (M=3) instance.  Both PGBDD and PGPBS
@@ -17,11 +17,10 @@ urquhart-li-M_shuf.cnf
 tseitingrid-7xN_shuf.cnf
 	Elffer's Tseitin grid formula, introduced for the 2016 SAT
 	competition.  Defined over a grid graph with 7 rows and N
-	columns, for N=165,185,200.  The smaller versions of these
-	were used in the 2020 SAT competition.  None of the entrants
-	could generate proofs within the 5000s time limit.  Both PGBDD
-	and PGBPBS can handle them easily.
-
+	columns, for N=165,185.  These were used in the 2020 SAT
+	competition.  None of the entrants could generate proofs
+	within the 5000s time limit.  Both PGBDD and PGBPBS can handle
+	them easily.
 
 2. Make options
 

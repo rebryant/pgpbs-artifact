@@ -16,15 +16,15 @@ PSOLVER = $(INTERP) $(SDIR)/$(PSNAME)
 CHECKER = $(LDIR)/lrat-check
 FORMATTER = $(INTERP) $(FDIR)/formatter.py
 
-UFILES = urquhart-li-03_shuf.data urquhart-li-06_shuf.data urquhart-li-12_shuf.data
-TFILES = tseitingrid7x165_shuf.data tseitingrid7x185_shuf.data tseitingrid7x200_shuf.data
+UFILES = urquhart-li-03_shuf.data urquhart-li-12_shuf.data
+TFILES = tseitingrid7x165_shuf.data tseitingrid7x185_shuf.data
 FILES = $(UFILES) $(TFILES)
-TUFILES = urquhart-li-03_shuf.data urquhart-li-06_shuf.data 
+TUFILES = urquhart-li-03_shuf.data 
 
-PUFILES = urquhart-li-03_shuf.pdata urquhart-li-06_shuf.pdata urquhart-li-12_shuf.pdata
-PTFILES = tseitingrid7x165_shuf.pdata tseitingrid7x185_shuf.pdata tseitingrid7x200_shuf.pdata
+PUFILES = urquhart-li-03_shuf.pdata urquhart-li-12_shuf.pdata
+PTFILES = tseitingrid7x165_shuf.pdata tseitingrid7x185_shuf.pdata
 PFILES = $(PUFILES) $(PTFILES)
-PTUFILES = urquhart-li-03_shuf.pdata urquhart-li-06_shuf.pdata
+PTUFILES = urquhart-li-03_shuf.pdata
 
 run: results-pgpbs-parity.txt
 
