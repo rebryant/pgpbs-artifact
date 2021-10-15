@@ -63,6 +63,7 @@ def run(name, args):
     verbLevel = 1
     logName = None
     modulus = pseudoboolean.modulusAuto
+    seed = 123456
 
     optlist, args = getopt.getopt(args, "hbv:r:i:o:p:s:m:L:")
     for (opt, val) in optlist:
@@ -72,7 +73,7 @@ def run(name, args):
         elif opt == '-v':
             verbLevel = int(val)
         elif opt == '-r':
-            random.seed(int(val))
+            seed = int(val)
         elif opt == '-i':
             cnfName = val
         elif opt == '-o':
@@ -103,6 +104,7 @@ def run(name, args):
             usage(name)
             return
 
+    random.seed(seed)
     writer = stream.Logger(logName)
 
     if scheduler is None:
