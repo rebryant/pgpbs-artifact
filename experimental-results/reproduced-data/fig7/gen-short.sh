@@ -1,0 +1,31 @@
+#!/bin/sh
+make dl N=004
+make dl N=006
+make dl N=008
+make dl N=010
+make srcon N=004
+make srcon N=006
+make srcon N=008
+make srcon N=012
+make srcon N=016
+make drcon N=004
+make drcon N=006
+make drcon N=008
+make drcon N=012
+make drcon N=016
+make sreq N=004
+make sreq N=008
+make sreq N=016
+make sreq N=024
+make sreq N=032
+make scol N=004
+make scol N=008
+make scol N=016
+make scol N=024
+make scol N=032
+make dcook N=004
+make dcook N=008
+make dcook N=016
+make dcook N=024
+make dcook N=032
+make data

@@ -17,3 +17,4 @@ make ei N=012
 make ei N=016
 make ei N=024
 make ei N=032
+make data
