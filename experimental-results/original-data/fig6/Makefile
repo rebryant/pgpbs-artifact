@@ -7,15 +7,13 @@ SDIR=../../../src
 CDIR=../../code
 LDIR=../../../lrat
 
-GENERATOR=$(CDIR)/chess.py
+GENERATOR=$(INTERP) $(CDIR)/chess.py
 PGBDD=$(INTERP) $(SDIR)/pgbdd.py
 PGPBS=$(INTERP) $(SDIR)/pgpbs.py
 RANDOMIZER = $(INTERP) $(CDIR)/randomizer.py
 EXTRACTOR = $(INTERP)  $(SDIR)/constraint_extractor.py
 CHECKER = $(LDIR)/lrat-check
 GRABBER =$(INTERP)  $(CDIR)/grab_clauses.py
-EXTENSION = lrat
-
 EXTENSION = lrat
 
 bcr: chess-board-$(N)-column-randomorder.data
