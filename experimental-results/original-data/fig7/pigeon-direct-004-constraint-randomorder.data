@@ -1,0 +1,17 @@
+UNSAT
+Input variables: 20
+Total nodes: 314
+Maximum live nodes: 314
+Total apply operations: 1027
+Total GCs performed: 0
+Results from proof generation
+Total Clauses: 1851
+Input clauses: 45
+Constraint system proved formula UNSAT
+  Solution status: unsolvable
+    16 total constraints.  97 total nonzeros (6.06 avg, 10 max).
+Elapsed time for SAT: 0.03 seconds
+c parsed a formula with 20 variables and 45 clauses
+c VERIFIED
+c Added clauses = 1851.  Deleted clauses = 0.  Max live clauses = 1851
+c verification time = 0.00 secs

@@ -1,0 +1,8 @@
+Input Variables: 600
+Input Clauses: 7225
+Total Variables: 5200
+Total Clauses: 106425
+c parsed a formula with 325 variables and 7225 clauses
+c VERIFIED
+c Added clauses = 106425.  Deleted clauses = 0.  Max live clauses = 106425
+c verification time = 0.12 secs

@@ -1,0 +1,49 @@
+Resolution forest(8): Generated 251889 trees, of which 135135 are full in 1.27 seconds
+Resolution forest(6): Generated 1881 trees, of which 945 are full in 0.01 seconds
+Node 2338.  Size = 88. Before quantification for pigeon 1
+Node 2402.  Size = 24. After quantification for pigeon 1
+Node 3113.  Size = 129. Before quantification for pigeon 2
+Node 3192.  Size = 32. After quantification for pigeon 2
+Node 3939.  Size = 160. Before quantification for pigeon 3
+Node 4029.  Size = 38. After quantification for pigeon 3
+Node 4802.  Size = 181. Before quantification for pigeon 4
+Node 4899.  Size = 42. After quantification for pigeon 4
+Node 5688.  Size = 192. Before quantification for pigeon 5
+Node 5788.  Size = 44. After quantification for pigeon 5
+Node 6583.  Size = 193. Before quantification for pigeon 6
+Node 6682.  Size = 44. After quantification for pigeon 6
+Node 7473.  Size = 184. Before quantification for pigeon 7
+Node 7567.  Size = 42. After quantification for pigeon 7
+Node 8344.  Size = 165. Before quantification for pigeon 8
+Node 8429.  Size = 38. After quantification for pigeon 8
+Node 9182.  Size = 136. Before quantification for pigeon 9
+Node 9254.  Size = 32. After quantification for pigeon 9
+Node 9973.  Size = 97. Before quantification for pigeon 10
+Node 10028.  Size = 24. After quantification for pigeon 10
+Node 10703.  Size = 48. Before quantification for pigeon 11
+Node 10737.  Size = 14. After quantification for pigeon 11
+UNSAT
+Input variables: 300
+Variables quantified out: 288
+Total nodes: 10791
+Total nodes removed by gc: 10767
+Maximum live nodes: 1472
+Total apply operations: 26116
+Total cached results not requiring proofs: 4946
+Total cached results requiring proofs: 12698
+Total cache entries removed: 17632
+Total GCs performed: 24
+Results from And Operations:
+28 keys.  8320 total uses
+Results from Implication Testing Operations:
+16 keys.  4378 total uses
+Results from proof generation
+Total Clauses: 54779
+Input clauses: 433
+Added clauses without antecedents: 37279
+Added clauses requiring proofs: 17067
+Elapsed time for SAT: 5.44 seconds
+c parsed a formula with 300 variables and 433 clauses
+c VERIFIED
+c Added clauses = 54779.  Deleted clauses = 53375.  Max live clauses = 6375
+c verification time = 0.04 secs

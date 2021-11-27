@@ -1,0 +1,21 @@
+Node 278.  Size = 24, Solutions = 50. Before quantification for pigeon 1
+Node 299.  Size = 8, Solutions = 11. After quantification for pigeon 1
+Node 395.  Size = 25, Solutions = 22. Before quantification for pigeon 2
+Node 416.  Size = 8, Solutions = 5. After quantification for pigeon 2
+Node 509.  Size = 16, Solutions = 4. Before quantification for pigeon 3
+Node 526.  Size = 6, Solutions = 1. After quantification for pigeon 3
+UNSAT
+Input variables: 36
+Total nodes: 527
+Maximum live nodes: 527
+Total apply operations: 1084
+Total GCs performed: 0
+Results from proof generation
+Total Clauses: 2514
+Input clauses: 49
+Elapsed time for SAT: 0.05 seconds
+c parsed a formula with 36 variables and 49 clauses (2038 bytes)
+c VERIFIED
+c Proof bytes = 67798.
+c Added clauses = 2514.  Deleted clauses = 0.  Max live clauses = 2514
+c verification time = 0.00 secs

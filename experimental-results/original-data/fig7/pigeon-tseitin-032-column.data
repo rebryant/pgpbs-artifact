@@ -1,0 +1,89 @@
+Resolution forest(8): Generated 251889 trees, of which 135135 are full in 1.27 seconds
+Resolution forest(6): Generated 1881 trees, of which 945 are full in 0.01 seconds
+Node 16168.  Size = 248. Before quantification for pigeon 1
+Node 16352.  Size = 64. After quantification for pigeon 1
+Node 20843.  Size = 389. Before quantification for pigeon 2
+Node 21082.  Size = 92. After quantification for pigeon 2
+Node 25709.  Size = 520. Before quantification for pigeon 3
+Node 25999.  Size = 118. After quantification for pigeon 3
+Node 30752.  Size = 641. Before quantification for pigeon 4
+Node 31089.  Size = 142. After quantification for pigeon 4
+Node 35958.  Size = 752. Before quantification for pigeon 5
+Node 36338.  Size = 164. After quantification for pigeon 5
+Node 41313.  Size = 853. Before quantification for pigeon 6
+Node 41732.  Size = 184. After quantification for pigeon 6
+Node 46803.  Size = 944. Before quantification for pigeon 7
+Node 47257.  Size = 202. After quantification for pigeon 7
+Node 52414.  Size = 1025. Before quantification for pigeon 8
+Node 52899.  Size = 218. After quantification for pigeon 8
+Node 58132.  Size = 1096. Before quantification for pigeon 9
+Node 58644.  Size = 232. After quantification for pigeon 9
+Node 63943.  Size = 1157. Before quantification for pigeon 10
+Node 64478.  Size = 244. After quantification for pigeon 10
+Node 69833.  Size = 1208. Before quantification for pigeon 11
+Node 70387.  Size = 254. After quantification for pigeon 11
+Node 75788.  Size = 1249. Before quantification for pigeon 12
+Node 76357.  Size = 262. After quantification for pigeon 12
+Node 81794.  Size = 1280. Before quantification for pigeon 13
+Node 82374.  Size = 268. After quantification for pigeon 13
+Node 87837.  Size = 1301. Before quantification for pigeon 14
+Node 88424.  Size = 272. After quantification for pigeon 14
+Node 93903.  Size = 1312. Before quantification for pigeon 15
+Node 94493.  Size = 274. After quantification for pigeon 15
+Node 99978.  Size = 1313. Before quantification for pigeon 16
+Node 100567.  Size = 274. After quantification for pigeon 16
+Node 106048.  Size = 1304. Before quantification for pigeon 17
+Node 106632.  Size = 272. After quantification for pigeon 17
+Node 112099.  Size = 1285. Before quantification for pigeon 18
+Node 112674.  Size = 268. After quantification for pigeon 18
+Node 118117.  Size = 1256. Before quantification for pigeon 19
+Node 118679.  Size = 262. After quantification for pigeon 19
+Node 124088.  Size = 1217. Before quantification for pigeon 20
+Node 124633.  Size = 254. After quantification for pigeon 20
+Node 129998.  Size = 1168. Before quantification for pigeon 21
+Node 130522.  Size = 244. After quantification for pigeon 21
+Node 135833.  Size = 1109. Before quantification for pigeon 22
+Node 136332.  Size = 232. After quantification for pigeon 22
+Node 141579.  Size = 1040. Before quantification for pigeon 23
+Node 142049.  Size = 218. After quantification for pigeon 23
+Node 147222.  Size = 961. Before quantification for pigeon 24
+Node 147659.  Size = 202. After quantification for pigeon 24
+Node 152748.  Size = 872. Before quantification for pigeon 25
+Node 153148.  Size = 184. After quantification for pigeon 25
+Node 158143.  Size = 773. Before quantification for pigeon 26
+Node 158502.  Size = 164. After quantification for pigeon 26
+Node 163393.  Size = 664. Before quantification for pigeon 27
+Node 163707.  Size = 142. After quantification for pigeon 27
+Node 168484.  Size = 545. Before quantification for pigeon 28
+Node 168749.  Size = 118. After quantification for pigeon 28
+Node 173402.  Size = 416. Before quantification for pigeon 29
+Node 173614.  Size = 92. After quantification for pigeon 29
+Node 178133.  Size = 277. Before quantification for pigeon 30
+Node 178288.  Size = 64. After quantification for pigeon 30
+Node 182663.  Size = 128. Before quantification for pigeon 31
+Node 182757.  Size = 34. After quantification for pigeon 31
+UNSAT
+Input variables: 2080
+Variables quantified out: 2048
+Total nodes: 183221
+Total nodes removed by gc: 183157
+Maximum live nodes: 10332
+Total apply operations: 527176
+Total cached results not requiring proofs: 63836
+Total cached results requiring proofs: 261028
+Total cache entries removed: 324832
+Total GCs performed: 64
+Results from And Operations:
+28 keys.  158290 total uses
+Results from Implication Testing Operations:
+16 keys.  102738 total uses
+Results from proof generation
+Total Clauses: 989629
+Input clauses: 3073
+Added clauses without antecedents: 639439
+Added clauses requiring proofs: 347117
+Elapsed time for SAT: 27.44 seconds
+c parsed a formula with 2080 variables and 3073 clauses
+c VERIFIED
+c Added clauses = 989629.  Deleted clauses = 980125.  Max live clauses = 43935
+c verification time = 0.83 secs

@@ -1,0 +1,29 @@
+UNSAT
+Input variables: 300
+Variables quantified out: 144
+Total nodes: 14818
+Total nodes removed by gc: 7331
+Maximum live nodes: 10997
+Total apply operations: 221769
+Total cached results not requiring proofs: 2534
+Total cached results requiring proofs: 108965
+Total cache entries removed: 41949
+Total GCs performed: 1
+Results from And Operations:
+  Avg antecedents / proof = 5.79.  Avg clauses / proof = 1.93.  Avg tries / proof = 1.03
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.49.  Avg clauses / proof = 1.73.  Avg tries / proof = 1.07
+Results from proof generation
+Total Clauses: 262116
+Input clauses: 433
+Added clauses without antecedents: 55879
+Added clauses requiring proofs: 205804
+Constraint system proved formula UNSAT
+  Solution status: unsolvable
+    48 total constraints.  1161 total nonzeros (24.19 avg, 72 max).
+Elapsed time for SAT: 6.04 seconds
+c parsed a formula with 300 variables and 433 clauses (16975 bytes)
+c VERIFIED
+c Proof bytes = 13119204.
+c Added clauses = 262116.  Deleted clauses = 96577.  Max live clauses = 165539
+c verification time = 0.47 secs

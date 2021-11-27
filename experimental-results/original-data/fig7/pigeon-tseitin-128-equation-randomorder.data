@@ -1,0 +1,14 @@
+Performing justification of 638 steps.  Modulus = 2.
+Traceback (most recent call last):
+  File "/Users/bryant/repos/pgbdd/prototype/bdd.py", line 725, in applyAndJustifyImply
+    (check, implyHigh) = self.applyAndJustifyImply(highA, highB, highC)
+  File "/Users/bryant/repos/pgbdd/prototype/bdd.py", line 725, in applyAndJustifyImply
+    (check, implyHigh) = self.applyAndJustifyImply(highA, highB, highC)
+  File "/Users/bryant/repos/pgbdd/prototype/bdd.py", line 725, in applyAndJustifyImply
+    (check, implyHigh) = self.applyAndJustifyImply(highA, highB, highC)
+  [Previous line repeated 995 more times]
+  File "/Users/bryant/repos/pgbdd/prototype/bdd.py", line 705, in applyAndJustifyImply
+    splitVar = min(nodeA.variable, nodeB.variable)
+  File "/Users/bryant/repos/pgbdd/prototype/bdd.py", line 72, in __lt__
+    if self.level == self.leafLevel:
+RecursionError: maximum recursion depth exceeded in comparison
