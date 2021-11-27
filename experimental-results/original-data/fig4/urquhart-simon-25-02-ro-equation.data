@@ -1,0 +1,30 @@
+UNSAT
+Input variables: 3125
+Variables quantified out: 0
+Total nodes: 237631
+Total nodes removed by gc: 225207
+Maximum live nodes: 92781
+Total apply operations: 477401
+Total cached results not requiring proofs: 85564
+Total cached results requiring proofs: 221117
+Total cache entries removed: 305765
+Total GCs performed: 240
+Results from And Operations:
+  Avg antecedents / proof = 5.78.  Avg clauses / proof = 1.93.  Avg tries / proof = 1.02
+Results from Implication Testing Operations:
+Results from proof generation
+Total Clauses: 1358843
+Input clauses: 30188
+Added clauses without antecedents: 902116
+Added clauses requiring proofs: 426539
+Equation system proved formula UNSAT
+  Solution status: unsolvable
+  Solving: 1249 steps.  12.07 avg pivot degree (max=916)
+    3747 total equations.  59201 total nonzeros (15.80 avg, 916 max).  1248 vector operations
+    226812 modular operations.  Used values = {0, 1}
+Elapsed time for SAT: 454.39 seconds
+c parsed a formula with 3125 variables and 30188 clauses (1085753 bytes)
+c VERIFIED
+c Proof bytes = 32957810.
+c Added clauses = 1358843.  Deleted clauses = 1220441.  Max live clauses = 335431
+c verification time = 0.74 secs

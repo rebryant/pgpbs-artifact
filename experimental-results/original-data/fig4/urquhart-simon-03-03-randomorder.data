@@ -1,0 +1,14 @@
+UNSAT
+Input variables: 47
+Total nodes: 4400
+Maximum live nodes: 4400
+Total apply operations: 7275
+Total GCs performed: 0
+Results from proof generation
+Total Clauses: 22658
+Input clauses: 516
+Elapsed time for SAT: 0.31 seconds
+c parsed a formula with 47 variables and 516 clauses
+c VERIFIED
+c Added clauses = 22658.  Deleted clauses = 0.  Max live clauses = 22658
+c verification time = 0.01 secs

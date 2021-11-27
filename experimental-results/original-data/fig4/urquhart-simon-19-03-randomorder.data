@@ -1,0 +1,27 @@
+Resolution forest(8): Generated 251889 trees, of which 135135 are full in 1.34 seconds
+Resolution forest(6): Generated 1881 trees, of which 945 are full in 0.01 seconds
+UNSAT
+Input variables: 1809
+Variables quantified out: 720
+Total nodes: 765481
+Total nodes removed by gc: 764418
+Maximum live nodes: 62333
+Total apply operations: 1895109
+Total cached results not requiring proofs: 198474
+Total cached results requiring proofs: 938348
+Total cache entries removed: 1135680
+Total GCs performed: 65
+Results from And Operations:
+43 keys.  642392 total uses
+Results from Implication Testing Operations:
+8 keys.  295956 total uses
+Results from proof generation
+Total Clauses: 4879010
+Input clauses: 17666
+Added clauses without antecedents: 3018438
+Added clauses requiring proofs: 1842906
+Elapsed time for SAT: 168.76 seconds
+c parsed a formula with 1809 variables and 17666 clauses
+c VERIFIED
+c Added clauses = 4879010.  Deleted clauses = 4819682.  Max live clauses = 436041
+c verification time = 4.37 secs

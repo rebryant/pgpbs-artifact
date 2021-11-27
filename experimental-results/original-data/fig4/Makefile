@@ -4,78 +4,76 @@ VLEVEL = 1
 PCT=50
 SEED=123456
 
-GENERATOR = ../../urquhart-li-code/generate
-RANDOMIZER = ../../randomizer.py
-EXTRACTOR = ../../xor_extractor.py
-SOLVER = $(INTERP) ../../../prototype/solver.py
-CHECKER = ../../../pcaas/lrat-check
-GRABBER = ../../grab_clauses.py
-VGRABBER = ../../grab_verification.py
-#EXTENSION = lratb
+SDIR=../../../src
+CDIR=../../code
+LDIR=../../../lrat
+
+LGENERATOR=$(CDIR)/urquhart-li-code/generate
+SGENERATOR=$(CDIR)/urquhart-simon-code/genurq
+PGBDD=$(SDIR)/pgbdd.py
+PGPBS=$(SDIR)/pgpbs.py
+RANDOMIZER = $(CDIR)/randomizer.py
+EXTRACTOR = $(SDIR)/xor_extractor.py
+CHECKER = $(LDIR)/lrat-check
+GRABBER = $(CDIR)/grab_clauses.py
 EXTENSION = lrat
 
-io: urquhart-li-$(M)-inputorder.data
-ro: urquhart-li-$(M)-randomorder.data
-l: urquhart-li-$(M)-linear.data
-ie: urquhart-li-$(M)-io-equation.data
-re: urquhart-li-$(M)-ro-equation.data
+lc: urquhart-li-$(M).cnf
+sc: urquhart-simon-$(M)-$(SEED).cnf
 
-urquhart-li-$(M)-inputorder.data:
-	$(GENERATOR) -m$(M) -p$(PCT) -furquhart-li-$(M)-inputorder.cnf | tee urquhart-li-$(M)-inputorder.data
-	$(SOLVER) -v $(VLEVEL) -i urquhart-li-$(M)-inputorder.cnf -b \
-		-o urquhart-li-$(M)-inputorder.$(EXTENSION) 2>&1 | tee -a urquhart-li-$(M)-inputorder.data
-	$(CHECKER) urquhart-li-$(M)-inputorder.cnf urquhart-li-$(M)-inputorder.$(EXTENSION) | tee -a urquhart-li-$(M)-inputorder.data
-	rm -f urquhart-li-$(M)-inputorder.$(EXTENSION)
+lro: urquhart-li-$(M)-randomorder.data
+lre: urquhart-li-$(M)-ro-equation.data
+sro: urquhart-simon-$(M)-$(SEED)-randomorder.data
+sre: urquhart-simon-$(M)-$(SEED)-ro-equation.data
+
+urquhart-li-$(M).cnf:
+	$(LGENERATOR) -m$(M) -p$(PCT) -furquhart-li-$(M).cnf 
+
+urquhart-simon-$(M)-$(SEED).cnf:
+	-$(SGENERATOR) $(M) $(SEED) > urquhart-simon-$(M)-$(SEED).cnf 
+
 
 urquhart-li-$(M)-randomorder.data:
-	$(GENERATOR) -m$(M) -p$(PCT) -furquhart-li-$(M)_randomorder.cnf | tee urquhart-li-$(M)-randomorder.data
-	$(RANDOMIZER) urquhart-li-$(M)_randomorder.cnf $(SEED)
-	$(SOLVER) -v $(VLEVEL) -i urquhart-li-$(M)_randomorder.cnf -b -p urquhart-li-$(M)_randomorder.order \
+	$(RANDOMIZER) urquhart-li-$(M).cnf $(SEED)
+	$(INTERP) $(PGBDD) -v $(VLEVEL) -i urquhart-li-$(M).cnf -b -p urquhart-li-$(M).order \
 		-o urquhart-li-$(M)-randomorder.$(EXTENSION) 2>&1 | tee -a urquhart-li-$(M)-randomorder.data
-	$(CHECKER) urquhart-li-$(M)_randomorder.cnf urquhart-li-$(M)-randomorder.$(EXTENSION) | tee -a urquhart-li-$(M)-randomorder.data
+	$(CHECKER) urquhart-li-$(M).cnf urquhart-li-$(M)-randomorder.$(EXTENSION) | tee -a urquhart-li-$(M)-randomorder.data
 	rm -f urquhart-li-$(M)-randomorder.$(EXTENSION)
 
-urquhart-li-$(M)-io-equation.data:
-	$(GENERATOR) -m$(M) -p$(PCT) -furquhart-li-$(M)-io-equation.cnf | tee urquhart-li-$(M)-io-equation.data
-	$(EXTRACTOR) -i urquhart-li-$(M)-io-equation.cnf -o urquhart-li-$(M)-io-equation.schedule
-	$(SOLVER) -v $(VLEVEL) -i urquhart-li-$(M)-io-equation.cnf -s urquhart-li-$(M)-io-equation.schedule \
-		-o urquhart-li-$(M)-io-equation.$(EXTENSION) 2>&1 | tee -a urquhart-li-$(M)-io-equation.data
-	$(CHECKER) urquhart-li-$(M)-io-equation.cnf urquhart-li-$(M)-io-equation.$(EXTENSION) | tee -a urquhart-li-$(M)-io-equation.data
-	rm -f urquhart-li-$(M)-io-equation.$(EXTENSION)
-
 urquhart-li-$(M)-ro-equation.data:
-	$(GENERATOR) -m$(M) -p$(PCT) -ft.cnf | tee urquhart-li-$(M)-ro-equation.data
-	mv t.cnf urquhart-li-$(M)-ro-equation.cnf
-	$(RANDOMIZER) urquhart-li-$(M)-ro-equation.cnf $(SEED)
-	$(EXTRACTOR) -i urquhart-li-$(M)-ro-equation.cnf -o urquhart-li-$(M)-ro-equation.schedule
-	$(SOLVER) -v $(VLEVEL) -i urquhart-li-$(M)-ro-equation.cnf -s urquhart-li-$(M)-ro-equation.schedule \
-	        -p urquhart-li-$(M)-ro-equation.order \
+	$(RANDOMIZER) urquhart-li-$(M).cnf $(SEED)
+	$(EXTRACTOR) -i urquhart-li-$(M).cnf -o urquhart-li-$(M)-ro-equation.schedule
+	$(INTERP) $(PGPBS) -v $(VLEVEL) -i urquhart-li-$(M).cnf -s urquhart-li-$(M)-ro-equation.schedule \
+	        -p urquhart-li-$(M).order \
 		-o urquhart-li-$(M)-ro-equation.$(EXTENSION) 2>&1 | tee -a urquhart-li-$(M)-ro-equation.data
-	$(CHECKER) urquhart-li-$(M)-ro-equation.cnf urquhart-li-$(M)-ro-equation.$(EXTENSION) | tee -a urquhart-li-$(M)-ro-equation.data
+	$(CHECKER) urquhart-li-$(M).cnf urquhart-li-$(M)-ro-equation.$(EXTENSION) | tee -a urquhart-li-$(M)-ro-equation.data
 	rm -f urquhart-li-$(M)-ro-equation.$(EXTENSION)
 
+urquhart-simon-$(M)-$(SEED)-randomorder.data:
+	$(RANDOMIZER) urquhart-simon-$(M)-$(SEED).cnf $(SEED)
+	$(INTERP) $(PGBDD) -v $(VLEVEL) -i urquhart-simon-$(M)-$(SEED).cnf -b -p urquhart-simon-$(M)-$(SEED).order \
+		-o urquhart-simon-$(M)-$(SEED)-randomorder.$(EXTENSION) 2>&1 | tee -a urquhart-simon-$(M)-$(SEED)-randomorder.data
+	$(CHECKER) urquhart-simon-$(M)-$(SEED).cnf urquhart-simon-$(M)-$(SEED)-randomorder.$(EXTENSION) | tee -a urquhart-simon-$(M)-$(SEED)-randomorder.data
+	rm -f urquhart-simon-$(M)-$(SEED)-randomorder.$(EXTENSION)
 
-urquhart-li-$(M)-linear.data:
-	$(GENERATOR) -m$(M) -p$(PCT) -furquhart-li-$(M)-linear.cnf | tee urquhart-li-$(M)-linear.data
-	$(SOLVER) -v $(VLEVEL) -i urquhart-li-$(M)-linear.cnf \
-		-o urquhart-li-$(M)-linear.$(EXTENSION) 2>&1 | tee -a urquhart-li-$(M)-linear.data
-	$(CHECKER) urquhart-li-$(M)-linear.cnf urquhart-li-$(M)-linear.$(EXTENSION) | tee -a urquhart-li-$(M)-linear.data
-	rm -f urquhart-li-$(M)-linear.$(EXTENSION)
+urquhart-simon-$(M)-$(SEED)-ro-equation.data:
+	$(EXTRACTOR) -i urquhart-simon-$(M)-$(SEED).cnf -o urquhart-simon-$(M)-$(SEED)-ro-equation.schedule
+	$(RANDOMIZER) urquhart-simon-$(M)-$(SEED).cnf $(SEED)
+	$(INTERP) $(PGPBS) -v $(VLEVEL) -i urquhart-simon-$(M)-$(SEED).cnf -s  urquhart-simon-$(M)-$(SEED)-ro-equation.schedule \
+		-p urquhart-simon-$(M)-$(SEED).order \
+		-o urquhart-simon-$(M)-$(SEED)-ro-equation.$(EXTENSION) 2>&1 | tee -a urquhart-simon-$(M)-$(SEED)-ro-equation.data
+	$(CHECKER) urquhart-simon-$(M)-$(SEED).cnf urquhart-simon-$(M)-$(SEED)-ro-equation.$(EXTENSION) | tee -a urquhart-simon-$(M)-$(SEED)-ro-equation.data
+	rm -f urquhart-simon-$(M)-$(SEED)-ro-equation.$(EXTENSION)
 
 
 data:
-	$(GRABBER) urquhart-li-*-randomorder.data > urquhart-li-randomorder.csv
-	$(GRABBER) urquhart-li-*-io-equation.data > urquhart-li-io-equation.csv
-	$(GRABBER) urquhart-li-*-ro-equation.data > urquhart-li-ro-equation.csv
-#	$(GRABBER) urquhart-li-*-inputorder.data > urquhart-li-inputorder.csv
-#	$(GRABBER) urquhart-li-*-linear.data > urquhart-li-linear.csv
-
-vdata:
-	$(VGRABBER) urquhart-li-*-randomorder.data > urquhart-li-randomorder-verification.csv
-
+	$(GRABBER) urquhart-li-*-randomorder.data > urquhart-li-bucket.csv
+	$(GRABBER) urquhart-li-*-ro-equation.data > urquhart-li-equation.csv
+	$(GRABBER) urquhart-simon-*-randomorder.data > urquhart-simon-bucket.csv
+	$(GRABBER) urquhart-simon-*-ro-equation.data > urquhart-simon-equation.csv
 
 clean:
 	rm -f *~
 
 superclean: clean
-	rm -f *.cnf *.lrat *.lratb *.data *.order *.schedule
+	rm -f *.lrat *.lratb *.order *.schedule *.csv

@@ -1,0 +1,39 @@
+ -> Working with value 40 for m
+ -> Working with value 50 for p
+ -> Using File t.cnf
+ -> Matrix size is 120 Bytes
+ -> Matrix size is 2625 Ko
+ -> 33120 variables created
+ -> 22080 * 4 clauses created
+ -> Clauses 0 = 11039
+ -> Clauses 1 = 11041
+UNSAT
+Input variables: 33120
+Variables quantified out: 0
+Total nodes: 912388
+Total nodes removed by gc: 810112
+Maximum live nodes: 246580
+Total apply operations: 2698879
+Total cached results not requiring proofs: 176640
+Total cached results requiring proofs: 1261597
+Total cache entries removed: 1435641
+Total GCs performed: 109
+Results from And Operations:
+  Avg antecedents / proof = 5.61.  Avg clauses / proof = 1.92.  Avg tries / proof = 1.05
+Results from Implication Testing Operations:
+Results from proof generation
+Total Clauses: 6020279
+Input clauses: 88320
+Added clauses without antecedents: 3506359
+Added clauses requiring proofs: 2425600
+Equation system proved formula UNSAT
+  Solution status: unsolvable
+  Solving: 22079 steps.  6.13 avg pivot degree (max=2596)
+    66237 total equations.  534837 total nonzeros (8.07 avg, 3449 max).  22078 vector operations
+    1962716 modular operations.  Used values = {0, 1}
+Elapsed time for SAT: 4756.42 seconds
+c parsed a formula with 33120 variables and 88320 clauses (2296427 bytes)
+c VERIFIED
+c Proof bytes = 342255784.
+c Added clauses = 6020279.  Deleted clauses = 5402717.  Max live clauses = 863872
+c verification time = 9.42 secs

@@ -1,0 +1,19 @@
+Performing justification of 35 steps.  Modulus = 2.
+UNSAT
+Input variables: 47
+Total nodes: 3172
+Maximum live nodes: 3172
+Total apply operations: 4597
+Total GCs performed: 0
+Results from proof generation
+Total Clauses: 16216
+Input clauses: 516
+Equation system proved formula UNSAT
+  Solution status: unsolvable
+  Solving: 17 steps.  6.29 avg pivot degree (max=18)
+    34 total equations.  282 total nonzeros (8.29 avg, 18 max).  16 vector operations
+Elapsed time for SAT: 0.23 seconds
+c parsed a formula with 47 variables and 516 clauses
+c VERIFIED
+c Added clauses = 16216.  Deleted clauses = 0.  Max live clauses = 16216
+c verification time = 0.01 secs

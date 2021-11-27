@@ -1,0 +1,35 @@
+ -> Working with value 16 for m
+ -> Working with value 50 for p
+ -> Using File urquhart-li-16_randomorder.cnf
+ -> Matrix size is 120 Bytes
+ -> Matrix size is 420 Ko
+ -> 5184 variables created
+ -> 3456 * 4 clauses created
+ -> Clauses 0 = 1727
+ -> Clauses 1 = 1729
+UNSAT
+Input variables: 5184
+Variables quantified out: 3454
+Total nodes: 1766734
+Total nodes removed by gc: 1766716
+Maximum live nodes: 57341
+Total apply operations: 4555279
+Total cached results not requiring proofs: 564489
+Total cached results requiring proofs: 2269001
+Total cache entries removed: 2833481
+Total GCs performed: 314
+Results from And Operations:
+  Avg antecedents / proof = 5.95.  Avg clauses / proof = 1.98.  Avg tries / proof = 1.00
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 5.94.  Avg clauses / proof = 1.99.  Avg tries / proof = 1.00
+Results from proof generation
+Total Clauses: 11552279
+Input clauses: 13824
+Added clauses without antecedents: 9269454
+Added clauses requiring proofs: 2269001
+Elapsed time for SAT: 375.43 seconds
+c parsed a formula with 5184 variables and 13824 clauses (359528 bytes)
+c VERIFIED
+c Proof bytes = 329693399.
+c Added clauses = 11552279.  Deleted clauses = 11507281.  Max live clauses = 402863
+c verification time = 6.62 secs
