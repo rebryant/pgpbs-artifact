@@ -8,8 +8,7 @@ CDIR=../../code
 LDIR=../../../lrat
 
 SGENERATOR=$(INTERP) $(CDIR)/pigeon-sinz.py
-DGENERATOR=$(CDIR)/pigeon-code/pigeonhole
-CGENERATOR=$(INTERP) $(CDIR)/pigeon-cook.py
+DGENERATOR=$(INTERP) $(CDIR)/pigeon-cook.py
 PGBDD=$(INTERP) $(SDIR)/pgbdd.py
 PGPBS=$(INTERP) $(SDIR)/pgpbs.py
 RANDOMIZER = $(INTERP) $(CDIR)/randomizer.py
@@ -26,7 +25,7 @@ sreq: pigeon-tseitin-$(N)-equation-randomorder.data
 dcook: pigeon-direct-$(N)-cook.data
 
 pigeon-direct-$(N)-pm-linear.data:
-	$(DGENERATOR) $(N) > pigeon-direct-$(N)-pm.cnf
+	$(DGENERATOR) -c -n $(N) -r pigeon-direct-$(N)-pm
 	$(PGBDD) -v $(VLEVEL) -i pigeon-direct-$(N)-pm.cnf -o pigeon-direct-$(N)-pm.$(EXTENSION) 2>&1 | tee pigeon-direct-$(N)-pm-linear.data
 	$(CHECKER) pigeon-direct-$(N)-pm.cnf pigeon-direct-$(N)-pm.$(EXTENSION) | tee -a pigeon-direct-$(N)-pm-linear.data
 	rm -f pigeon-direct-$(N)-pm.$(EXTENSION)
@@ -48,7 +47,7 @@ pigeon-tseitin-$(N)-constraint-randomorder.data:
 	rm -f pigeon-tseitin-$(N)-constraint-randomorder.$(EXTENSION)
 
 pigeon-direct-$(N)-constraint-randomorder.data:
-	$(DGENERATOR) $(N) > pigeon-direct-$(N)-constraint-randomorder.cnf
+	$(DGENERATOR) -c -n $(N) -r pigeon-direct-$(N)-constraint-randomorder
 	$(RANDOMIZER) pigeon-direct-$(N)-constraint-randomorder.cnf $(SEED)
 	$(EXTRACTOR) < pigeon-direct-$(N)-constraint-randomorder.cnf > pigeon-direct-$(N)-constraint-randomorder.schedule
 	$(PGPBS) -r $(SEED) -v $(VLEVEL) -i pigeon-direct-$(N)-constraint-randomorder.cnf -o pigeon-direct-$(N)-constraint-randomorder.$(EXTENSION) \
@@ -68,7 +67,7 @@ pigeon-tseitin-$(N)-equation-randomorder.data:
 	rm -f pigeon-tseitin-$(N)-equation-randomorder.$(EXTENSION)
 
 pigeon-direct-$(N)-cook.data:
-	$(CGENERATOR) -n $(N) -r pigeon-direct-$(N)-cook | tee pigeon-direct-$(N)-cook.data
+	$(DGENERATOR) -n $(N) -r pigeon-direct-$(N)-cook | tee pigeon-direct-$(N)-cook.data
 	$(CHECKER) pigeon-direct-$(N)-cook.cnf pigeon-direct-$(N)-cook.lrat | tee -a pigeon-direct-$(N)-cook.data
 	rm -f pigeon-direct-$(N)-cook.lrat
 
@@ -76,13 +75,15 @@ pigeon-direct-$(N)-cook.data:
 data:
 	$(GRABBER) pigeon-direct-*-pm-linear.data > pigeon-direct-linear-inputorder.csv
 	$(GRABBER) pigeon-tseitin-*-column.data > pigeon-sinz-column-inputorder.csv
-	$(GRABBER) pigeon-tseitin-*-constraint-randorder.data > pigeon-sinz-constraint-randomorder.csv
-	$(GRABBER) pigeon-direct-*-constraint-randorder.data > pigeon-direct-constraint-randomorder.csv
+	$(GRABBER) pigeon-tseitin-*-constraint-randomorder.data > pigeon-sinz-constraint-randomorder.csv
+	$(GRABBER) pigeon-direct-*-constraint-randomorder.data > pigeon-direct-constraint-randomorder.csv
 	$(GRABBER) pigeon-tseitin-*-equation-randomorder.data > pigeon-sinz-equation-randomorder.csv
+	$(GRABBER) pigeon-direct-*-cook.data > pigeon-direct-cook.csv
 
 clean:
 	rm -f *~
 
 superclean: clean
 	rm -f *.cnf *.lrat *.lratb *.order *.schedule
+	rm -f *.data *.csv
 
