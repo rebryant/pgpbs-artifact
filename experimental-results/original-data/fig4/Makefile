@@ -43,7 +43,7 @@ urquhart-li-$(M)-randomorder.data:
 urquhart-li-$(M)-ro-equation.data:
 	$(RANDOMIZER) urquhart-li-$(M).cnf $(SEED)
 	$(EXTRACTOR) -i urquhart-li-$(M).cnf -o urquhart-li-$(M)-ro-equation.schedule
-	$(INTERP) $(PGPBS) -v $(VLEVEL) -i urquhart-li-$(M).cnf -s urquhart-li-$(M)-ro-equation.schedule \
+	$(INTERP) $(PGPBS) -r $(SEED) -v $(VLEVEL) -i urquhart-li-$(M).cnf -s urquhart-li-$(M)-ro-equation.schedule \
 	        -p urquhart-li-$(M).order \
 		-o urquhart-li-$(M)-ro-equation.$(EXTENSION) 2>&1 | tee -a urquhart-li-$(M)-ro-equation.data
 	$(CHECKER) urquhart-li-$(M).cnf urquhart-li-$(M)-ro-equation.$(EXTENSION) | tee -a urquhart-li-$(M)-ro-equation.data
@@ -59,7 +59,7 @@ urquhart-simon-$(M)-$(SEED)-randomorder.data:
 urquhart-simon-$(M)-$(SEED)-ro-equation.data:
 	$(EXTRACTOR) -i urquhart-simon-$(M)-$(SEED).cnf -o urquhart-simon-$(M)-$(SEED)-ro-equation.schedule
 	$(RANDOMIZER) urquhart-simon-$(M)-$(SEED).cnf $(SEED)
-	$(INTERP) $(PGPBS) -v $(VLEVEL) -i urquhart-simon-$(M)-$(SEED).cnf -s  urquhart-simon-$(M)-$(SEED)-ro-equation.schedule \
+	$(INTERP) $(PGPBS) -r $(SEED) -v $(VLEVEL) -i urquhart-simon-$(M)-$(SEED).cnf -s  urquhart-simon-$(M)-$(SEED)-ro-equation.schedule \
 		-p urquhart-simon-$(M)-$(SEED).order \
 		-o urquhart-simon-$(M)-$(SEED)-ro-equation.$(EXTENSION) 2>&1 | tee -a urquhart-simon-$(M)-$(SEED)-ro-equation.data
 	$(CHECKER) urquhart-simon-$(M)-$(SEED).cnf urquhart-simon-$(M)-$(SEED)-ro-equation.$(EXTENSION) | tee -a urquhart-simon-$(M)-$(SEED)-ro-equation.data
