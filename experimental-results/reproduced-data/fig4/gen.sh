@@ -11,7 +11,6 @@ make lre M=04
 make lre M=06
 make lre M=08
 make lre M=12
-make lre M=12
 make lre M=16
 make sro M=03 SEED=01
 make sro M=03 SEED=02
