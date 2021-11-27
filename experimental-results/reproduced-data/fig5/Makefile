@@ -58,5 +58,5 @@ clean:
 	rm -f *~
 
 superclean: clean
-	rm -f *.cnf *.lrat *.lratb *.order *.schedule *.buckets
+	rm -f *.cnf *.lrat *.lratb *.order *.schedule *.buckets *.csv
 	rm -f *.data
