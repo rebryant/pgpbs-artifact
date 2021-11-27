@@ -6,6 +6,7 @@ def usage(name):
     print("%s: [-h] [-v] -r ROOT -n N" % name)
     print("  -h      Print this message")
     print("  -v      Add descriptive comments")
+    print("  -c      Only generate CNF")
     print("  -r ROOT Root name of file.  Generates ROOT.cnf, ROOT.lrat")
     print("  -n N    Number of holes.  There will be N+1 pigeons")
 
@@ -142,14 +143,17 @@ def run(name, args):
     verbose = False
     hcount = 0
     rootName = None
+    cnfOnly = False
 
-    optlist,args = getopt.getopt(args, "hvr:n:")
+    optlist,args = getopt.getopt(args, "hvcr:n:")
     for (opt, val) in optlist:
         if opt == '-h':
             usage(name)
             return
         elif opt == '-v':
             verbose = True
+        elif opt == '-c':
+            cnfOnly = True
         elif opt == '-r':
             rootName = val
         elif opt == '-n':
@@ -166,9 +170,10 @@ def run(name, args):
     (vcount, ccount) = php.generateCnf(rootName)
     print("Input Variables: %d" % (vcount))
     print("Input Clauses: %d" % (ccount))
-    (vcount, ccount) = php.generateProof(rootName)
-    print("Total Variables: %d" % (vcount))
-    print("Total Clauses: %d" % (ccount))
+    if not cnfOnly:
+        (vcount, ccount) = php.generateProof(rootName)
+        print("Total Variables: %d" % (vcount))
+        print("Total Clauses: %d" % (ccount))
 
 
 if __name__ == "__main__":
