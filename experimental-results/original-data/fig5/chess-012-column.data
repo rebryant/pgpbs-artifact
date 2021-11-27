@@ -1,0 +1,39 @@
+Node 1995.  Size = 23, Solutions = 144. After quantification for column 0
+Node 2401.  Size = 33, Solutions = 507. After quantification for column 1
+Node 2885.  Size = 40, Solutions = 714. After quantification for column 2
+Node 3411.  Size = 45, Solutions = 779. After quantification for column 3
+Node 3965.  Size = 48, Solutions = 791. After quantification for column 4
+Node 4533.  Size = 49, Solutions = 792. After quantification for column 5
+Node 5104.  Size = 49, Solutions = 792. After quantification for column 6
+Node 5675.  Size = 49, Solutions = 792. After quantification for column 7
+Node 6246.  Size = 49, Solutions = 792. After quantification for column 8
+Node 6817.  Size = 49, Solutions = 792. After quantification for column 9
+Node 7334.  Size = 41, Solutions = 330. After quantification for column 10
+UNSAT
+Input variables: 260
+Variables quantified out: 249
+Total nodes: 7214
+Total nodes removed by gc: 6957
+Maximum live nodes: 2005
+Total apply operations: 13511
+Total cached results not requiring proofs: 4080
+Total cached results requiring proofs: 6317
+Total cache entries removed: 10141
+Total GCs performed: 20
+Results from And Operations:
+  Avg antecedents / proof = 4.76.  Avg clauses / proof = 1.45.  Avg tries / proof = 1.08
+Chain resolution signatures:
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.17.  Avg clauses / proof = 1.39.  Avg tries / proof = 1.00
+Chain resolution signatures:
+Results from proof generation
+Total Clauses: 34830
+Input clauses: 856
+Added clauses without antecedents: 28004
+Added clauses requiring proofs: 5970
+Elapsed time for SAT: 0.78 seconds
+c parsed a formula with 260 variables and 856 clauses (18014 bytes)
+c VERIFIED
+c Proof bytes = 1945106.
+c Added clauses = 34830.  Deleted clauses = 31202.  Max live clauses = 8107
+c verification time = 0.06 secs

@@ -1,0 +1,20 @@
+File chess-004-equation-integer.cnf: 14 constraints extracted (0 unit, 0 ALO, 0 AMO, 14 equations)
+Performing justification of 33 steps.  Modulus = none.
+UNSAT
+Input variables: 20
+Total nodes: 244
+Maximum live nodes: 244
+Total apply operations: 543
+Total GCs performed: 0
+Results from proof generation
+Total Clauses: 1261
+Input clauses: 56
+Equation system proved formula UNSAT
+  Solution status: unsolvable
+  Solving: 13 steps.  2.92 avg pivot degree (max=5)
+    26 total equations.  91 total nonzeros (3.50 avg, 7 max).  12 vector operations
+Elapsed time for SAT: 0.02 seconds
+c parsed a formula with 20 variables and 56 clauses
+c VERIFIED
+c Added clauses = 1261.  Deleted clauses = 0.  Max live clauses = 1261
+c verification time = 0.00 secs

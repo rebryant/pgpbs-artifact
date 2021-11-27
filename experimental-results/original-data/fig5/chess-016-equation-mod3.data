@@ -1,0 +1,32 @@
+File chess-016-equation-mod3.cnf: 254 formulas (0 unit, 0 ALO, 0 AMO, 254 equations)
+Performing justification of 636 steps.  Modulus = 3.
+UNSAT
+Input variables: 476
+Variables quantified out: 0
+Total nodes: 12403
+Total nodes removed by gc: 8607
+Maximum live nodes: 10023
+Total apply operations: 43152
+Total cached results not requiring proofs: 2036
+Total cached results requiring proofs: 20049
+Total cache entries removed: 14078
+Total GCs performed: 1
+Results from And Operations:
+  Avg antecedents / proof = 5.31.  Avg clauses / proof = 1.78.  Avg tries / proof = 1.09
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.00.  Avg clauses / proof = 1.50.  Avg tries / proof = 1.00
+Results from proof generation
+Total Clauses: 83862
+Input clauses: 1592
+Added clauses without antecedents: 47939
+Added clauses requiring proofs: 34331
+Equation system proved formula UNSAT
+  Solution status: unsolvable
+  Solving: 253 steps.  3417 pivot evaluations.  0.00 avg pivot degree (max=0)
+    506 total equations.  3700 total nonzeros (7.31 avg, 59 max).  252 vector operations
+    25755 modular operations.  Used values = {-1, 0, 1}
+Elapsed time for SAT: 1.51 seconds
+c parsed a formula with 476 variables and 1592 clauses
+c VERIFIED
+c Added clauses = 83862.  Deleted clauses = 48608.  Max live clauses = 58850
+c verification time = 0.08 secs

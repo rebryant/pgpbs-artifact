@@ -1,0 +1,43 @@
+Node 3639.  Size = 31, Solutions = 987. After quantification for column 0
+Node 4219.  Size = 45, Solutions = 5373. After quantification for column 1
+Node 4895.  Size = 56, Solutions = 9061. After quantification for column 2
+Node 5641.  Size = 65, Solutions = 10760. After quantification for column 3
+Node 6443.  Size = 72, Solutions = 11304. After quantification for column 4
+Node 7287.  Size = 77, Solutions = 11423. After quantification for column 5
+Node 8159.  Size = 80, Solutions = 11439. After quantification for column 6
+Node 9045.  Size = 81, Solutions = 11440. After quantification for column 7
+Node 9934.  Size = 81, Solutions = 11440. After quantification for column 8
+Node 10823.  Size = 81, Solutions = 11440. After quantification for column 9
+Node 11712.  Size = 81, Solutions = 11440. After quantification for column 10
+Node 12601.  Size = 81, Solutions = 11440. After quantification for column 11
+Node 13490.  Size = 81, Solutions = 11440. After quantification for column 12
+Node 14379.  Size = 81, Solutions = 11440. After quantification for column 13
+Node 15200.  Size = 71, Solutions = 5005. After quantification for column 14
+UNSAT
+Input variables: 476
+Variables quantified out: 461
+Total nodes: 14924
+Total nodes removed by gc: 14831
+Maximum live nodes: 3163
+Total apply operations: 28457
+Total cached results not requiring proofs: 8802
+Total cached results requiring proofs: 13418
+Total cache entries removed: 22195
+Total GCs performed: 30
+Results from And Operations:
+  Avg antecedents / proof = 4.86.  Avg clauses / proof = 1.45.  Avg tries / proof = 1.10
+Chain resolution signatures:
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.19.  Avg clauses / proof = 1.41.  Avg tries / proof = 1.00
+Chain resolution signatures:
+Results from proof generation
+Total Clauses: 72573
+Input clauses: 1592
+Added clauses without antecedents: 58218
+Added clauses requiring proofs: 12763
+Elapsed time for SAT: 1.76 seconds
+c parsed a formula with 476 variables and 1592 clauses (33765 bytes)
+c VERIFIED
+c Proof bytes = 4201170.
+c Added clauses = 72573.  Deleted clauses = 67389.  Max live clauses = 12615
+c verification time = 0.13 secs

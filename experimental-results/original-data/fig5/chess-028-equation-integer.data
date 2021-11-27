@@ -1,0 +1,31 @@
+File chess-028-equation-integer.cnf: 782 formulas (0 unit, 0 ALO, 0 AMO, 782 equations)
+Performing justification of 1953 steps.  Modulus = none.
+UNSAT
+Input variables: 1508
+Variables quantified out: 0
+Total nodes: 70302
+Total nodes removed by gc: 12113
+Maximum live nodes: 58189
+Total apply operations: 733537
+Total cached results not requiring proofs: 6596
+Total cached results requiring proofs: 361821
+Total cache entries removed: 15939
+Total GCs performed: 4
+Results from And Operations:
+  Avg antecedents / proof = 5.62.  Avg clauses / proof = 1.87.  Avg tries / proof = 1.06
+Results from Implication Testing Operations:
+Results from proof generation
+Total Clauses: 949222
+Input clauses: 5144
+Added clauses without antecedents: 270771
+Added clauses requiring proofs: 673307
+Equation system proved formula UNSAT
+  Solution status: unsolvable
+  Solving: 781 steps.  5.82 avg pivot degree (max=63)
+    1562 total equations.  12087 total nonzeros (7.74 avg, 111 max).  780 vector operations
+    302242 modular operations.  Used values = {-1, 0, 1}
+Elapsed time for SAT: 24.09 seconds
+c parsed a formula with 1508 variables and 5144 clauses
+c VERIFIED
+c Added clauses = 949222.  Deleted clauses = 50174.  Max live clauses = 899048
+c verification time = 0.97 secs

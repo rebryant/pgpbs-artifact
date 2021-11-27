@@ -1,0 +1,154 @@
+Node 244551.  Size = 255, Solutions = 251728825683549488150424261. After quantification for column 0
+Node 249723.  Size = 381, Solutions = 236450091383766710743153129879709. After quantification for column 1
+Node 255775.  Size = 504, Solutions = 44949361005726067813432476432861829. After quantification for column 2
+Node 262681.  Size = 625, Solutions = 560118051838428192861822837730000484. After quantification for column 3
+Node 270427.  Size = 744, Solutions = 2230113486124086618927616551786070581. After quantification for column 4
+Node 278999.  Size = 861, Solutions = 5074372622906036385547829117876659256. After quantification for column 5
+Node 288383.  Size = 976, Solutions = 8510753114746527232625900634196511800. After quantification for column 6
+Node 298565.  Size = 1089, Solutions = 11929191996332677069441751243820217720. After quantification for column 7
+Node 309531.  Size = 1200, Solutions = 14951755167594678494225848346571093669. After quantification for column 8
+Node 321267.  Size = 1309, Solutions = 17424908563595583493841193276980026960. After quantification for column 9
+Node 333759.  Size = 1416, Solutions = 19337702761500812880444415781576810704. After quantification for column 10
+Node 346993.  Size = 1521, Solutions = 20751240845724017311588669801395324560. After quantification for column 11
+Node 360955.  Size = 1624, Solutions = 21754505431925289497360827280529312640. After quantification for column 12
+Node 375631.  Size = 1725, Solutions = 22440019866053215955699631096377470804. After quantification for column 13
+Node 391007.  Size = 1824, Solutions = 22891429438638984664322305549374012500. After quantification for column 14
+Node 407069.  Size = 1921, Solutions = 23178039294199768373310595056408218880. After quantification for column 15
+Node 423803.  Size = 2016, Solutions = 23353540331849573295743811619917929520. After quantification for column 16
+Node 441195.  Size = 2109, Solutions = 23457192807410929621182591347739320240. After quantification for column 17
+Node 459231.  Size = 2200, Solutions = 23516239425570554572402638655274853296. After quantification for column 18
+Node 477897.  Size = 2289, Solutions = 23548680736613724313473130014930277599. After quantification for column 19
+Node 497179.  Size = 2376, Solutions = 23565869126949043168094571624512328800. After quantification for column 20
+Node 517063.  Size = 2461, Solutions = 23574649766434763814140108659439216200. After quantification for column 21
+Node 537535.  Size = 2544, Solutions = 23578973598677909476973597153260653000. After quantification for column 22
+Node 558581.  Size = 2625, Solutions = 23581025417219218730745992940999076000. After quantification for column 23
+Node 580187.  Size = 2704, Solutions = 23581963391409531573391951873249799200. After quantification for column 24
+Node 602339.  Size = 2781, Solutions = 23582376303960701901602828416281278800. After quantification for column 25
+Node 625023.  Size = 2856, Solutions = 23582551269693256751957685459653755600. After quantification for column 26
+Node 648225.  Size = 2929, Solutions = 23582622598808390245282533956877640800. After quantification for column 27
+Node 671931.  Size = 3000, Solutions = 23582650560857154010360878024437391328. After quantification for column 28
+Node 696127.  Size = 3069, Solutions = 23582661095170663970468518065811077029. After quantification for column 29
+Node 720799.  Size = 3136, Solutions = 23582664906721411837644145722953129701. After quantification for column 30
+Node 745933.  Size = 3201, Solutions = 23582666230311579065754559791393086400. After quantification for column 31
+Node 771515.  Size = 3264, Solutions = 23582666671103162152434734418409515200. After quantification for column 32
+Node 797531.  Size = 3325, Solutions = 23582666811767534990390025439089757920. After quantification for column 33
+Node 823967.  Size = 3384, Solutions = 23582666854742788926738459470867597280. After quantification for column 34
+Node 850809.  Size = 3441, Solutions = 23582666867300644992561408739957363520. After quantification for column 35
+Node 878043.  Size = 3496, Solutions = 23582666870806695597136485628519817280. After quantification for column 36
+Node 905655.  Size = 3549, Solutions = 23582666871740873554276555457380207920. After quantification for column 37
+Node 933631.  Size = 3600, Solutions = 23582666871978125098947049382170148400. After quantification for column 38
+Node 961957.  Size = 3649, Solutions = 23582666872035479540760081522007339200. After quantification for column 39
+Node 990619.  Size = 3696, Solutions = 23582666872048657857912471856394366400. After quantification for column 40
+Node 1019603.  Size = 3741, Solutions = 23582666872051531172653149554963319200. After quantification for column 41
+Node 1048895.  Size = 3784, Solutions = 23582666872052124594600872194650698400. After quantification for column 42
+Node 1078481.  Size = 3825, Solutions = 23582666872052240459010086635664040000. After quantification for column 43
+Node 1108347.  Size = 3864, Solutions = 23582666872052261799401773779954785600. After quantification for column 44
+Node 1138479.  Size = 3901, Solutions = 23582666872052265498347770794677541000. After quantification for column 45
+Node 1168863.  Size = 3936, Solutions = 23582666872052266100096846565854430600. After quantification for column 46
+Node 1199485.  Size = 3969, Solutions = 23582666872052266191700826850465240000. After quantification for column 47
+Node 1230331.  Size = 4000, Solutions = 23582666872052266204705828488031992000. After quantification for column 48
+Node 1261387.  Size = 4029, Solutions = 23582666872052266206421143359193813600. After quantification for column 49
+Node 1292639.  Size = 4056, Solutions = 23582666872052266206630419247614428000. After quantification for column 50
+Node 1324073.  Size = 4081, Solutions = 23582666872052266206653918446949793600. After quantification for column 51
+Node 1355675.  Size = 4104, Solutions = 23582666872052266206656332824810792000. After quantification for column 52
+Node 1387431.  Size = 4125, Solutions = 23582666872052266206656558241262320400. After quantification for column 53
+Node 1419327.  Size = 4144, Solutions = 23582666872052266206656577209438557200. After quantification for column 54
+Node 1451349.  Size = 4161, Solutions = 23582666872052266206656578633717598400. After quantification for column 55
+Node 1483483.  Size = 4176, Solutions = 23582666872052266206656578727978827200. After quantification for column 56
+Node 1515715.  Size = 4189, Solutions = 23582666872052266206656578733391770400. After quantification for column 57
+Node 1548031.  Size = 4200, Solutions = 23582666872052266206656578733655995424. After quantification for column 58
+Node 1580417.  Size = 4209, Solutions = 23582666872052266206656578733666655296. After quantification for column 59
+Node 1612859.  Size = 4216, Solutions = 23582666872052266206656578733666996544. After quantification for column 60
+Node 1645343.  Size = 4221, Solutions = 23582666872052266206656578733667004671. After quantification for column 61
+Node 1677855.  Size = 4224, Solutions = 23582666872052266206656578733667004799. After quantification for column 62
+Node 1710381.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 63
+Node 1742910.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 64
+Node 1775439.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 65
+Node 1807968.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 66
+Node 1840497.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 67
+Node 1873026.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 68
+Node 1905555.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 69
+Node 1938084.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 70
+Node 1970613.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 71
+Node 2003142.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 72
+Node 2035671.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 73
+Node 2068200.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 74
+Node 2100729.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 75
+Node 2133258.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 76
+Node 2165787.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 77
+Node 2198316.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 78
+Node 2230845.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 79
+Node 2263374.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 80
+Node 2295903.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 81
+Node 2328432.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 82
+Node 2360961.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 83
+Node 2393490.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 84
+Node 2426019.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 85
+Node 2458548.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 86
+Node 2491077.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 87
+Node 2523606.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 88
+Node 2556135.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 89
+Node 2588664.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 90
+Node 2621193.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 91
+Node 2653722.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 92
+Node 2686251.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 93
+Node 2718780.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 94
+Node 2751309.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 95
+Node 2783838.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 96
+Node 2816367.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 97
+Node 2848896.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 98
+Node 2881425.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 99
+Node 2913954.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 100
+Node 2946483.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 101
+Node 2979012.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 102
+Node 3011541.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 103
+Node 3044070.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 104
+Node 3076599.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 105
+Node 3109128.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 106
+Node 3141657.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 107
+Node 3174186.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 108
+Node 3206715.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 109
+Node 3239244.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 110
+Node 3271773.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 111
+Node 3304302.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 112
+Node 3336831.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 113
+Node 3369360.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 114
+Node 3401889.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 115
+Node 3434418.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 116
+Node 3466947.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 117
+Node 3499476.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 118
+Node 3532005.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 119
+Node 3564534.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 120
+Node 3597063.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 121
+Node 3629592.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 122
+Node 3662121.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 123
+Node 3694650.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 124
+Node 3727179.  Size = 4225, Solutions = 23582666872052266206656578733667004800. After quantification for column 125
+Node 3759248.  Size = 4159, Solutions = 11607093851088224773588784845476728925. After quantification for column 126
+UNSAT
+Input variables: 32508
+Variables quantified out: 32381
+Total nodes: 3728620
+Total nodes removed by gc: 3724215
+Maximum live nodes: 212043
+Total apply operations: 8108977
+Total cached results not requiring proofs: 2901818
+Total cached results requiring proofs: 3997790
+Total cache entries removed: 6899359
+Total GCs performed: 254
+Results from And Operations:
+  Avg antecedents / proof = 5.51.  Avg clauses / proof = 1.49.  Avg tries / proof = 1.41
+Chain resolution signatures:
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.24.  Avg clauses / proof = 1.48.  Avg tries / proof = 1.00
+Chain resolution signatures:
+Results from proof generation
+Total Clauses: 19241287
+Input clauses: 113144
+Added clauses without antecedents: 13264916
+Added clauses requiring proofs: 5863227
+Elapsed time for SAT: 6143.95 seconds
+c parsed a formula with 32508 variables and 113144 clauses
+c VERIFIED
+c Added clauses = 19241287.  Deleted clauses = 18883863.  Max live clauses = 801296
+c verification time = 20.63 secs
