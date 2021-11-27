@@ -1,0 +1,32 @@
+File chess-torus-112-equation-auto-randomorder.cnf: 12542 formulas (0 unit, 0 ALO, 0 AMO, 12542 equations)
+Performing justification of 31363 steps.  Modulus = 3.
+UNSAT
+Input variables: 25080
+Variables quantified out: 0
+Total nodes: 870945
+Total nodes removed by gc: 787933
+Maximum live nodes: 169580
+Total apply operations: 3373228
+Total cached results not requiring proofs: 112848
+Total cached results requiring proofs: 1603008
+Total cache entries removed: 1708084
+Total GCs performed: 75
+Results from And Operations:
+  Avg antecedents / proof = 5.54.  Avg clauses / proof = 1.85.  Avg tries / proof = 1.06
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.00.  Avg clauses / proof = 1.50.  Avg tries / proof = 1.00
+Results from proof generation
+Total Clauses: 6357478
+Input clauses: 87772
+Added clauses without antecedents: 3392952
+Added clauses requiring proofs: 2876754
+Equation system proved formula UNSAT
+  Solution status: unsolvable
+  Solving: 12541 steps.  248852 pivot evaluations.  6.47 avg pivot degree (max=802)
+    25082 total equations.  262194 total nonzeros (10.45 avg, 802 max).  12540 vector operations
+    1738656 modular operations.  Used values = {-1, 0, 1}
+Elapsed time for SAT: 2019.33 seconds
+c parsed a formula with 25080 variables and 87772 clauses
+c VERIFIED
+c Added clauses = 6357478.  Deleted clauses = 5795346.  Max live clauses = 940163
+c verification time = 6.63 secs

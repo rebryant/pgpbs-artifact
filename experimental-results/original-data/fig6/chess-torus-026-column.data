@@ -1,0 +1,52 @@
+Node 10657.  Size = 99, Solutions = 1855077841. After quantification for column 0
+Node 12970.  Size = 425, Solutions = 517779094940. After quantification for column 1
+Node 19532.  Size = 1302, Solutions = 9036696822217. After quantification for column 2
+Node 38519.  Size = 4117, Solutions = 39384180210916. After quantification for column 3
+Node 84310.  Size = 11116, Solutions = 79322184691254. After quantification for column 4
+Node 210926.  Size = 33160, Solutions = 106612767417260. After quantification for column 5
+Node 508609.  Size = 77186, Solutions = 118012444918272. After quantification for column 6
+Node 1131702.  Size = 134578, Solutions = 121016340201126. After quantification for column 7
+Node 1982266.  Size = 128697, Solutions = 121501049038981. After quantification for column 8
+Node 2734545.  Size = 85707, Solutions = 121546349634996. After quantification for column 9
+Node 3195161.  Size = 39535, Solutions = 121548607361609. After quantification for column 10
+Node 3391243.  Size = 12834, Solutions = 121548659612030. After quantification for column 11
+Node 3450476.  Size = 2836, Solutions = 121548660035790. After quantification for column 12
+Node 3463415.  Size = 676, Solutions = 121548660036300. After quantification for column 13
+Node 3472178.  Size = 676, Solutions = 121548660036300. After quantification for column 14
+Node 3480931.  Size = 676, Solutions = 121548660036300. After quantification for column 15
+Node 3489694.  Size = 676, Solutions = 121548660036300. After quantification for column 16
+Node 3498447.  Size = 676, Solutions = 121548660036300. After quantification for column 17
+Node 3507210.  Size = 676, Solutions = 121548660036300. After quantification for column 18
+Node 3515963.  Size = 676, Solutions = 121548660036300. After quantification for column 19
+Node 3524726.  Size = 676, Solutions = 121548660036300. After quantification for column 20
+Node 3533479.  Size = 676, Solutions = 121548660036300. After quantification for column 21
+Node 3542242.  Size = 676, Solutions = 121548660036300. After quantification for column 22
+Node 3550995.  Size = 676, Solutions = 121548660036300. After quantification for column 23
+Node 3557871.  Size = 649, Solutions = 58343356817424. After quantification for column 24
+UNSAT
+Input variables: 1344
+Variables quantified out: 1295
+Total nodes: 3557181
+Total nodes removed by gc: 3556442
+Maximum live nodes: 989591
+Total apply operations: 25936699
+Total cached results not requiring proofs: 5162878
+Total cached results requiring proofs: 12965977
+Total cache entries removed: 18128763
+Total GCs performed: 50
+Results from And Operations:
+  Avg antecedents / proof = 5.90.  Avg clauses / proof = 1.68.  Avg tries / proof = 1.15
+Chain resolution signatures:
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.88.  Avg clauses / proof = 1.68.  Avg tries / proof = 1.00
+Chain resolution signatures:
+Results from proof generation
+Total Clauses: 35229438
+Input clauses: 4696
+Added clauses without antecedents: 13410703
+Added clauses requiring proofs: 21814039
+Elapsed time for SAT: 920.61 seconds
+c parsed a formula with 1344 variables and 4696 clauses
+c VERIFIED
+c Added clauses = 35229438.  Deleted clauses = 35212305.  Max live clauses = 9481701
+c verification time = 41.02 secs

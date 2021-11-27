@@ -1,0 +1,17 @@
+Node 207.  Size = 11, Solutions = 7. After quantification for column 0
+Node 357.  Size = 17, Solutions = 14. After quantification for column 1
+Node 507.  Size = 11, Solutions = 5. After quantification for column 2
+UNSAT
+Input variables: 24
+Total nodes: 517
+Maximum live nodes: 517
+Total apply operations: 1045
+Total GCs performed: 0
+Results from proof generation
+Total Clauses: 2563
+Input clauses: 76
+Elapsed time for SAT: 0.05 seconds
+c parsed a formula with 24 variables and 76 clauses
+c VERIFIED
+c Added clauses = 2563.  Deleted clauses = 0.  Max live clauses = 2563
+c verification time = 0.01 secs

@@ -1,0 +1,48 @@
+Node 7677.  Size = 83, Solutions = 54608393. After quantification for column 0
+Node 9594.  Size = 349, Solutions = 6391913780. After quantification for column 1
+Node 14928.  Size = 1046, Solutions = 71555238949. After quantification for column 2
+Node 29693.  Size = 3153, Solutions = 236958163416. After quantification for column 3
+Node 63358.  Size = 7896, Solutions = 400380001631. After quantification for column 4
+Node 144794.  Size = 19853, Solutions = 484495846986. After quantification for column 5
+Node 298724.  Size = 31000, Solutions = 509338014567. After quantification for column 6
+Node 505773.  Size = 30585, Solutions = 513432525446. After quantification for column 7
+Node 683087.  Size = 18690, Solutions = 513778402481. After quantification for column 8
+Node 780633.  Size = 7246, Solutions = 513791441022. After quantification for column 9
+Node 815651.  Size = 1812, Solutions = 513791607115. After quantification for column 10
+Node 824525.  Size = 484, Solutions = 513791607420. After quantification for column 11
+Node 830830.  Size = 484, Solutions = 513791607420. After quantification for column 12
+Node 837123.  Size = 484, Solutions = 513791607420. After quantification for column 13
+Node 843428.  Size = 484, Solutions = 513791607420. After quantification for column 14
+Node 849721.  Size = 484, Solutions = 513791607420. After quantification for column 15
+Node 856026.  Size = 484, Solutions = 513791607420. After quantification for column 16
+Node 862319.  Size = 484, Solutions = 513791607420. After quantification for column 17
+Node 868624.  Size = 484, Solutions = 513791607420. After quantification for column 18
+Node 874917.  Size = 484, Solutions = 513791607420. After quantification for column 19
+Node 879886.  Size = 461, Solutions = 244662670200. After quantification for column 20
+UNSAT
+Input variables: 960
+Variables quantified out: 919
+Total nodes: 879468
+Total nodes removed by gc: 878933
+Maximum live nodes: 241021
+Total apply operations: 4848275
+Total cached results not requiring proofs: 1181055
+Total cached results requiring proofs: 2422441
+Total cache entries removed: 3603420
+Total GCs performed: 42
+Results from And Operations:
+  Avg antecedents / proof = 5.85.  Avg clauses / proof = 1.67.  Avg tries / proof = 1.16
+Chain resolution signatures:
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.85.  Avg clauses / proof = 1.67.  Avg tries / proof = 1.00
+Chain resolution signatures:
+Results from proof generation
+Total Clauses: 7346653
+Input clauses: 3352
+Added clauses without antecedents: 3299398
+Added clauses requiring proofs: 4043903
+Elapsed time for SAT: 163.32 seconds
+c parsed a formula with 960 variables and 3352 clauses
+c VERIFIED
+c Added clauses = 7346653.  Deleted clauses = 7334384.  Max live clauses = 1928296
+c verification time = 8.10 secs

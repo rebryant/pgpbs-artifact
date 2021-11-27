@@ -1,0 +1,30 @@
+Node 152.  Size = 7, Solutions = 3. After quantification for column 0
+Node 316.  Size = 9, Solutions = 4. After quantification for column 1
+Node 475.  Size = 5, Solutions = 1. After quantification for column 2
+UNSAT
+Input variables: 20
+Variables quantified out: 17
+Total nodes: 481
+Total nodes removed by gc: 399
+Maximum live nodes: 440
+Total apply operations: 1037
+Total cached results not requiring proofs: 254
+Total cached results requiring proofs: 488
+Total cache entries removed: 652
+Total GCs performed: 1
+Results from And Operations:
+  Avg antecedents / proof = 4.25.  Avg clauses / proof = 1.43.  Avg tries / proof = 1.77
+Chain resolution signatures:
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.09.  Avg clauses / proof = 1.27.  Avg tries / proof = 1.09
+Chain resolution signatures:
+Results from proof generation
+Total Clauses: 2371
+Input clauses: 56
+Added clauses without antecedents: 1694
+Added clauses requiring proofs: 621
+Elapsed time for SAT: 0.04 seconds
+c parsed a formula with 20 variables and 56 clauses
+c VERIFIED
+c Added clauses = 2371.  Deleted clauses = 1863.  Max live clauses = 2153
+c verification time = 0.00 secs

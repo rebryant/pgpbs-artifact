@@ -1,0 +1,42 @@
+Node 4107.  Size = 59, Solutions = 275807. After quantification for column 0
+Node 5430.  Size = 235, Solutions = 8760584. After quantification for column 1
+Node 8922.  Size = 662, Solutions = 49292003. After quantification for column 2
+Node 17358.  Size = 1707, Solutions = 105508863. After quantification for column 3
+Node 33203.  Size = 3086, Solutions = 136662117. After quantification for column 4
+Node 56935.  Size = 3631, Solutions = 144572137. After quantification for column 5
+Node 79426.  Size = 2333, Solutions = 145396009. After quantification for column 6
+Node 91832.  Size = 751, Solutions = 145422563. After quantification for column 7
+Node 96160.  Size = 256, Solutions = 145422675. After quantification for column 8
+Node 99517.  Size = 256, Solutions = 145422675. After quantification for column 9
+Node 102879.  Size = 256, Solutions = 145422675. After quantification for column 10
+Node 106236.  Size = 256, Solutions = 145422675. After quantification for column 11
+Node 109598.  Size = 256, Solutions = 145422675. After quantification for column 12
+Node 112955.  Size = 256, Solutions = 145422675. After quantification for column 13
+Node 115633.  Size = 239, Solutions = 67863915. After quantification for column 14
+UNSAT
+Input variables: 504
+Variables quantified out: 475
+Total nodes: 115503
+Total nodes removed by gc: 115214
+Maximum live nodes: 28210
+Total apply operations: 421083
+Total cached results not requiring proofs: 128903
+Total cached results requiring proofs: 209649
+Total cache entries removed: 338500
+Total GCs performed: 30
+Results from And Operations:
+  Avg antecedents / proof = 5.69.  Avg clauses / proof = 1.63.  Avg tries / proof = 1.23
+Chain resolution signatures:
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.78.  Avg clauses / proof = 1.64.  Avg tries / proof = 1.00
+Chain resolution signatures:
+Results from proof generation
+Total Clauses: 771093
+Input clauses: 1756
+Added clauses without antecedents: 427788
+Added clauses requiring proofs: 341549
+Elapsed time for SAT: 13.31 seconds
+c parsed a formula with 504 variables and 1756 clauses
+c VERIFIED
+c Added clauses = 771093.  Deleted clauses = 764620.  Max live clauses = 191667
+c verification time = 0.80 secs
