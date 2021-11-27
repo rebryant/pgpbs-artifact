@@ -16,7 +16,12 @@ CHECKER = $(LDIR)/lrat-check
 GRABBER =$(INTERP)  $(CDIR)/grab_clauses.py
 EXTENSION = lrat
 
-EXTENSION = lrat
+short:
+	./gen-short.sh
+
+full:
+	./gen-full.sh
+
 
 bcr: chess-board-$(N)-column-randomorder.data
 

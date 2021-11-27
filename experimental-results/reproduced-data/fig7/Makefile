@@ -17,6 +17,12 @@ CHECKER = $(LDIR)/lrat-check
 GRABBER =$(INTERP)  $(CDIR)/grab_clauses.py
 EXTENSION = lrat
 
+short:
+	./gen-short.sh
+
+full:
+	./gen-full.sh
+
 dl: pigeon-direct-$(N)-pm-linear.data
 scol: pigeon-tseitin-$(N)-column.data
 srcon: pigeon-tseitin-$(N)-constraint-randomorder.data

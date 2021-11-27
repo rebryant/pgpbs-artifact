@@ -17,6 +17,12 @@ CHECKER = $(LDIR)/lrat-check
 GRABBER = $(INTERP) $(CDIR)/grab_clauses.py
 EXTENSION = lrat
 
+short:
+	./gen-short.sh
+
+full:
+	./gen-full.sh
+
 lro: urquhart-li-$(M)-randomorder.data
 lre: urquhart-li-$(M)-ro-equation.data
 sro: urquhart-simon-$(M)-$(SEED)-randomorder.data
