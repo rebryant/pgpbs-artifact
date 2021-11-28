@@ -1,5 +1,3 @@
-
-
 short:
 	(cd fig4; make short)
 	(cd fig5; make short)
@@ -24,7 +22,12 @@ superclean:
 	(cd fig6; make superclean)
 	(cd fig7; make superclean)
 
-data: short
+reproduce: short
+	rm -rf csv
+	mkdir csv
+	cp -p */*.csv csv
+
+reproduce-full: full
 	rm -rf csv
 	mkdir csv
 	cp -p */*.csv csv

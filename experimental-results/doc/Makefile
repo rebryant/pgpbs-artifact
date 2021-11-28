@@ -8,7 +8,7 @@ RDESTDATA = reproduced-data
 CTHRESH=100000000
 NTHRESH=128
 
-all:
+document:
 	rm -f graphs.pdf
 	make data
 	make graphs.pdf
