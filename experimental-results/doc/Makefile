@@ -8,7 +8,12 @@ RDESTDATA = reproduced-data
 CTHRESH=100000000
 NTHRESH=128
 
-graphs.pdf: graphs.tex 
+all:
+	rm -f graphs.pdf
+	make data
+	make graphs.pdf
+
+graphs.pdf:
 	pdflatex graphs
 	pdflatex graphs
 
@@ -109,5 +114,5 @@ rdata:
 
 clean:
 
-	rm -f *~ *.log
+	rm -f *~ *.log *.aux *.pdf
 
