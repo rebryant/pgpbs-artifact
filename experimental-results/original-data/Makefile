@@ -1,17 +1,3 @@
-
-
-short:
-	(cd fig4; make short)
-	(cd fig5; make short)
-	(cd fig6; make short)
-	(cd fig7; make short)
-
-full:
-	(cd fig4; make full)
-	(cd fig5; make full)
-	(cd fig6; make full)
-	(cd fig7; make full)
-
 clean:
 	(cd fig4; make clean)
 	(cd fig5; make clean)
@@ -24,7 +10,9 @@ superclean:
 	(cd fig6; make superclean)
 	(cd fig7; make superclean)
 
-data: short
+data:
 	rm -rf csv
 	mkdir csv
 	cp -p */*.csv csv
+
+
