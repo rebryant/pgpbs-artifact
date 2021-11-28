@@ -7,34 +7,9 @@
 
 %\usepackage{latexsym}
 \usepackage{times}
-\usepackage{amsmath}
-\usepackage{amssymb}
-%\usepackage{alltt}
-\usepackage{stmaryrd}
-\usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{pgfplots}
-\usepackage{cite}
-\usepackage{booktabs}
-\usepackage{adjustbox}
-\usepackage{marvosym}
-\usepackage{ifthen}
-\usepackage{fancyvrb}
 \usepackage[many]{tcolorbox}
-
-
-
-\bibliographystyle{splncs04}
-
-%% Change tt font
-%usepackage{DejaVuSansMono}
-\usepackage{inconsolata}
-
-\usepackage[T1]{fontenc}
-
-
-\newboolean{longv}
-\setboolean{longv}{false}
 
 
 \definecolor{redorange}{rgb}{0.878431, 0.235294, 0.192157}
@@ -62,55 +37,6 @@
 \definecolor{medgreen}{rgb}{0.34, 0.65, 0.34}
 \definecolor{offwhite}{rgb}{0.839216, 0.823529, 0.768627}
 
-\newcommand{\one}{\mbox{\bf 1}}
-\newcommand{\zero}{\mbox{\bf 0}}
-\newcommand{\leafone}{\top}
-\newcommand{\leafzero}{\bot}
-\newcommand{\booland}{\land}
-\newcommand{\boolor}{\lor}
-\newcommand{\boolxor}{\oplus}
-\newcommand{\boolnot}{\neg}
-\newcommand{\tautology}{\top}
-\newcommand{\nil}{\bot}
-\renewcommand{\obar}[1]{\overline{#1}}
-\newcommand{\ite}{\mbox{\it ITE}}
-
-\newcommand{\opname}[1]{\mbox{\sc #1}}
-\newcommand{\andop}{\opname{And}}
-\newcommand{\orop}{\opname{Or}}
-\newcommand{\notop}{\opname{Not}}
-\newcommand{\implyop}{\opname{Imply}}
-\newcommand{\simplifyop}{\opname{Simplify}}
-\newcommand{\constrainop}{\opname{Constrain}}
-\newcommand{\applyop}{\opname{Apply}}
-\newcommand{\applyand}{\opname{ApplyAnd}}
-\newcommand{\applyor}{\opname{ApplyOr}}
-\newcommand{\applyimply}{\opname{ProveImplication}}
-\newcommand{\applyandimply}{\opname{ApplyAndProveImplication}}
-
-
-
-\newcommand{\func}[1]{\llbracket#1\rrbracket}
-
-\newcommand{\turnstile}{\vdash}
-\newcommand{\fname}[1]{\mbox{\small\sf #1}}
-
-\newcommand{\lo}{\fname{Lo}}
-\newcommand{\hi}{\fname{Hi}}
-\newcommand{\var}{\fname{Var}}
-\newcommand{\val}{\fname{Val}}
-\newcommand{\stephd}{\fname{HD}}
-\newcommand{\stephu}{\fname{HU}}
-\newcommand{\stepld}{\fname{LD}}
-\newcommand{\steplu}{\fname{LU}}
-
-\newcommand{\hsc}[1]{{\MakeUppercase{#1}}}
-
-
-\newcommand{\rupbdd}{${\sf RUP}_{\sf  BDD}$}
-\newcommand{\rup}{{\sf RUP}}
-\newcommand{\drat}{{\sf DRAT}}
-
 
 \newcommand{\pgbdd}{{\sffamily\scshape pgbdd}}
 \newcommand{\Pgbdd}{{\sffamily\scshape  Pgbdd}}
@@ -127,34 +53,6 @@
 %\newcommand{\Pgpbs}{\textsc{Pgpbs}}
 %\newcommand{\kissat}{\textsc{kissat}}
 %\newcommand{\Kissat}{\textsc{Kissat}}
-
-% Code formatting
-\newcommand{\showcomment}[1]{\texttt{/*} \textit{#1} \texttt{*/}}
-\newcommand{\keyword}[1]{\textbf{#1}}
-\newcommand{\keyif}{\keyword{if}}
-\newcommand{\keyfor}{\keyword{for}}
-\newcommand{\keyelse}{\keyword{else}}
-\newcommand{\keyor}{\keyword{or}}
-\newcommand{\keyreturn}{\keyword{return}}
-\newcommand{\assign}{\ensuremath{\longleftarrow}}
-
-
-
-\newcommand{\interp}{\sigma}
-\newcommand{\interpset}[1]{\Sigma_{#1}}
-\newcommand{\mcount}{\mu}
-
-\newcommand{\ifarg}{\textbf{I}}
-\newcommand{\thenarg}{\textbf{T}}
-\newcommand{\elsearg}{\textbf{E}}
-\newcommand{\depend}{{\it D}}
-
-\newcommand{\subs}[2]{[#2/#1]}
-\newcommand{\substrue}[1]{\subs{#1}{\tautology}}
-\newcommand{\subsfalse}[1]{\subs{#1}{\false}}
-\newcommand{\subsflip}[1]{\subs{#1}{\obar{#1}}}
-
-\newcommand{\amax}{a_{{\rm max}}}
 
 
 \title{Clausal Proofs for Pseudo-Boolean Reasoning \\ Experimental Data}
