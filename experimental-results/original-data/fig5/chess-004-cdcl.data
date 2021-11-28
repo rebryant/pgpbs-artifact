@@ -1,0 +1,81 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c KISSAT SAT Solver
+c Copyright (c) 2019-2020 Armin Biere JKU Linz
+c 
+c Version 1.0.3 baef4609163f542dc08f43aef02ce8da0581a2b5
+c Apple clang version 11.0.3 (clang-1103.0.32.29) -W -Wall -O3 -DNEMBEDDED -DNDEBUG -DNMETRICS -DNSTATISTICS
+c Wed Aug 12 21:38:16 EDT 2020 Darwin BRYANT-MC2.VLSI.CS.CMU.EDU 19.5.0 x86_64
+c
+c ---- [ proving ] -----------------------------------------------------------
+c
+c opened and writing proof to DRAT file:
+c 
+c   chess-004-cdcl.drat
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c 
+c   chess-004-cdcl.cnf
+c 
+c parsed 'p cnf 20 56' header
+c closing input after reading 1296 bytes (1 KB)
+c finished parsing after 0.00 seconds
+c
+c ---- [ options ] -----------------------------------------------------------
+c
+c --stable=0                       (different from default '1')
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c  seconds reductions redundant irredundant
+c         MB   restarts    trail variables
+c          level  conflicts   glue   remaining
+c
+c *  0.00  0 0  0  0   0   0 0% 0 56 20 95%
+c {  0.00  0 0  0  0   0   0 0% 0 56 20 95%
+c }  0.00  0 0  0  0   2   0 45% 0 56  0 0%
+c 0  0.00  0 0  0  0   2   0 45% 0 56  0 0%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           0.00   21.91 %  parse
+c           0.00   18.56 %  search
+c           0.00    8.25 %  focused
+c           0.00    0.00 %  simplify
+c =============================================
+c           0.00  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                                2             1196.89 per second
+c decisions:                                1                0.50 per conflict
+c propagations:                            33            19749    per second
+c
+c ---- [ proof ] -------------------------------------------------------------
+c
+c proof_added:                              2              100 %  per line
+c proof_bytes:                              8                0 MB 
+c proof_deleted:                            0                0 %  per line
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:        943718400 bytes        900 MB
+c process-time:                             0s               0.00 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20
+c parsing input formula with 20 variables and 56 clauses
+c finished parsing
+c detected empty clause; start verification via backward checking
+c 25 of 56 clauses in core                            
+c 2 of 3 lemmas in core using 30 resolution steps
+c 0 RAT lemmas in core; 0 redundant literals in core lemmas
+s VERIFIED
+c verification time: 0.126 seconds

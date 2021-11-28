@@ -1,0 +1,143 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c KISSAT SAT Solver
+c Copyright (c) 2019-2020 Armin Biere JKU Linz
+c 
+c Version 1.0.3 baef4609163f542dc08f43aef02ce8da0581a2b5
+c Apple clang version 11.0.3 (clang-1103.0.32.29) -W -Wall -O3 -DNEMBEDDED -DNDEBUG -DNMETRICS -DNSTATISTICS
+c Wed Aug 12 21:38:16 EDT 2020 Darwin BRYANT-MC2.VLSI.CS.CMU.EDU 19.5.0 x86_64
+c
+c ---- [ proving ] -----------------------------------------------------------
+c
+c opened and writing proof to DRAT file:
+c 
+c   chess-010-cdcl.drat
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c 
+c   chess-010-cdcl.cnf
+c 
+c parsed 'p cnf 176 572' header
+c closing input after reading 11909 bytes (12 KB)
+c finished parsing after 0.00 seconds
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c  seconds reductions redundant irredundant
+c         MB   restarts    trail   variables
+c          level  conflicts   glue     remaining
+c
+c *  0.00  0 0  0  0   0   0 0% 0 572 176 99%
+c {  0.00  0 0  0  0   0   0 0% 0 572 176 99%
+c -  0.00  0 24  1  0 300 214 83% 4 572 176 99%
+c d  0.00  0 23  1  0 401 293 82% 4 560 170 96%
+c t  0.00  0 23  1  0 401 293 82% 4 554 170 96%
+c u  0.01  0 23  1  0 401 225 82% 4 554 170 96%
+c v  0.01  0 23  1  0 401 199 82% 4 554 170 96%
+c -  0.01  0 18  2 131 902 539 69% 5 554 170 96%
+c }  0.01  0 17  2 147 1000 621 66% 5 554 170 96%
+c [  0.01  0 0  2 147 1000 621 0% 0 554 170 96%
+c O  0.01  0 15  2 147 1003 624 73% 4 554 170 96%
+c u  0.02  0 13  2 147 1201 659 67% 7 554 170 96%
+c v  0.02  0 13  2 147 1201 618 67% 7 554 170 96%
+c -  0.03  0 12  3 147 1802 797 53% 7 554 170 96%
+c ]  0.03  0 12  3 147 1823 811 53% 7 554 170 96%
+c {  0.03  0 17  3 147 1823 811 66% 5 554 170 96%
+c e  0.03  0 16  3 199 2000 977 64% 5 444 112 63%
+c 3  0.04  0 15  3 199 2402 359 65% 5 444 112 63%
+c u  0.04  0 15  3 199 2402 305 65% 5 444 112 63%
+c v  0.04  0 15  3 199 2402 286 65% 5 444 112 63%
+c
+c  seconds  reductions   redundant irredundant
+c         MB    restarts       trail   variables
+c          level    conflicts     glue     remaining
+c
+c w  0.04  0 15  3 199 2402 286 65% 5 443 112 63%
+c -  0.04  0 15  4 239 3002 682 64% 5 443 112 63%
+c I  0.04  0 15  4 239 3007 686 64% 5 443 112 63%
+c }  0.05  0 14  4 302 3823 1296 62% 5 443 112 63%
+c [  0.05  0 12  4 302 3823 1296 53% 7 443 112 63%
+c 3  0.05  0 11  4 302 4003 1435 54% 6 443 112 63%
+c u  0.06  0 11  4 302 4003 1181 54% 6 443 112 63%
+c v  0.06  0 11  4 302 4003 1073 54% 6 443 112 63%
+c -  0.07  0 11  5 302 4503 1238 53% 6 443 112 63%
+c ]  0.08  0 10  5 303 5270 1743 50% 6 443 112 63%
+c {  0.08  0 14  5 303 5270 1743 62% 5 443 112 63%
+c ^  0.08  0 12  5 317 6000 2204 58% 5 443 112 63%
+c 3  0.08  0 12  5 317 6004 2208 58% 5 443 112 63%
+c u  0.09  0 12  5 317 6004 1600 58% 5 443 112 63%
+c v  0.10  0 12  5 317 6004 1449 58% 5 443 112 63%
+c B  0.10  0 12  5 317 6010 1453 58% 5 443 112 63%
+c -  0.10  0 11  6 317 6303 1334 57% 5 443 112 63%
+c i  0.10  0 11  6 317 6565 1487 57% 5 443 109 62%
+c i  0.10  0 10  6 317 6986 1749 56% 5 443 108 61%
+c i  0.11  0 10  6 332 7281 1929 56% 5 443 107 60%
+c
+c  seconds  reductions   redundant irredundant
+c         MB    restarts        trail   variables
+c          level    conflicts      glue     remaining
+c
+c i  0.11  0 10  6 332 7432 1995 55% 5 443 102 58%
+c i  0.11  0 10  6 332 7463 2011 55% 5 443 101 57%
+c i  0.11  0 10  6 332 7467 2014 55% 5 443 100 56%
+c i  0.11  0 10  6 332 7517 2031 55% 5 443 91 51%
+c i  0.11  0 10  6 332 7518 2031 55% 5 443 84 47%
+c }  0.11  0 10  6 332 7522 2032 55% 5 443 43 24%
+c 0  0.11  0 10  6 332 7522 2032 55% 5 443 43 24%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           0.07   64.31 %  search
+c           0.05   42.10 %  focused
+c           0.04   35.02 %  simplify
+c           0.03   31.95 %  probe
+c           0.03   29.97 %  vivify
+c           0.02   22.18 %  stable
+c           0.00    3.29 %  reduce
+c           0.00    2.94 %  eliminate
+c           0.00    1.18 %  substitute
+c           0.00    0.44 %  parse
+c           0.00    0.28 %  ternary
+c           0.00    0.26 %  failed
+c           0.00    0.23 %  transitive
+c           0.00    0.12 %  autarky
+c =============================================
+c           0.11  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                             7522            68379.33 per second
+c decisions:                            12407                1.65 per conflict
+c propagations:                        271859          2471356    per second
+c reductions:                               6             1254    interval
+c rephased:                                 3             2507    interval
+c restarts:                               332               22.66 interval
+c
+c ---- [ proof ] -------------------------------------------------------------
+c
+c proof_added:                           8608               56 %  per line
+c proof_bytes:                         523823                0 MB 
+c proof_deleted:                         6695               44 %  per line
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:       2537553920 bytes       2420 MB
+c process-time:                             0s               0.11 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20
+c parsing input formula with 176 variables and 572 clauses
+c finished parsing
+c detected empty clause; start verification via backward checking
+c 433 of 572 clauses in core                            
+c 5181 of 8609 lemmas in core using 73597 resolution steps
+c 0 RAT lemmas in core; 639 redundant literals in core lemmas
+s VERIFIED
+c verification time: 0.175 seconds
