@@ -1,0 +1,32 @@
+File chess-016-equation-auto-randomorder.cnf: 254 formulas (0 unit, 0 ALO, 0 AMO, 254 equations)
+Performing justification of 641 steps.  Modulus = 3.
+UNSAT
+Input variables: 476
+Variables quantified out: 0
+Total nodes: 11599
+Total nodes removed by gc: 0
+Maximum live nodes: 11599
+Total apply operations: 40279
+Total cached results not requiring proofs: 2036
+Total cached results requiring proofs: 18586
+Total cache entries removed: 0
+Total GCs performed: 0
+Results from And Operations:
+  Avg antecedents / proof = 5.25.  Avg clauses / proof = 1.76.  Avg tries / proof = 1.10
+Results from Implication Testing Operations:
+  Avg antecedents / proof = 4.00.  Avg clauses / proof = 1.50.  Avg tries / proof = 1.00
+Results from proof generation
+Total Clauses: 77666
+Input clauses: 1592
+Added clauses without antecedents: 44759
+Added clauses requiring proofs: 31315
+Equation system proved formula UNSAT
+  Solution status: unsolvable
+  Solving: 253 steps.  5.25 avg pivot degree (max=30)
+    506 total equations.  3423 total nonzeros (6.76 avg, 30 max).  252 vector operations
+    21532 modular operations.  Used values = {-1, 0, 1}
+Elapsed time for SAT: 1.59 seconds
+c parsed a formula with 476 variables and 1592 clauses
+c VERIFIED
+c Added clauses = 77666.  Deleted clauses = 0.  Max live clauses = 77666
+c verification time = 0.07 secs

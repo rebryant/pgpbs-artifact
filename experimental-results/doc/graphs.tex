@@ -1,0 +1,382 @@
+\documentclass[runningheads]{llncs}
+
+%%
+%% Corresponding author:
+%% Randal E. Bryant (Randy.Bryant@cs.cmu.edu)
+%% 
+
+%\usepackage{latexsym}
+\usepackage{times}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{alltt}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{marvosym}
+\usepackage{ifthen}
+\usepackage{fancyvrb}
+\usepackage[many]{tcolorbox}
+
+
+
+\bibliographystyle{splncs04}
+
+%% Change tt font
+%usepackage{DejaVuSansMono}
+\usepackage{inconsolata}
+
+\usepackage[T1]{fontenc}
+
+
+\newboolean{longv}
+\setboolean{longv}{false}
+
+
+\definecolor{redorange}{rgb}{0.878431, 0.235294, 0.192157}
+\definecolor{lightblue}{rgb}{0.95, 0.9, 0.99}
+\definecolor{clearyellow}{rgb}{0.964706, 0.745098, 0}
+\definecolor{clearorange}{rgb}{0.917647, 0.462745, 0}
+\definecolor{mildgray}{rgb}{0.54902, 0.509804, 0.47451}
+\definecolor{softblue}{rgb}{0.643137, 0.858824, 0.909804}
+\definecolor{bluegray}{rgb}{0.141176, 0.313725, 0.603922}
+\definecolor{lightgreen}{rgb}{0.9, 0.99, 0.9}
+\definecolor{redpurple}{rgb}{0.835294, 0, 0.196078}
+\definecolor{midblue}{rgb}{0, 0.592157, 0.662745}
+\definecolor{clearpurple}{rgb}{0.67451, 0.0784314, 0.352941}
+\definecolor{browngreen}{rgb}{0.333333, 0.313725, 0.145098}
+\definecolor{darkestpurple}{rgb}{0.396078, 0.113725, 0.196078}
+\definecolor{greypurple}{rgb}{0.294118, 0.219608, 0.298039}
+\definecolor{darkturquoise}{rgb}{0, 0.239216, 0.298039}
+\definecolor{darkbrown}{rgb}{0.305882, 0.211765, 0.160784}
+\definecolor{midgreen}{rgb}{0.560784, 0.6, 0.243137}
+\definecolor{darkred}{rgb}{0.576471, 0.152941, 0.172549}
+\definecolor{darkpurple}{rgb}{0.313725, 0.027451, 0.470588}
+\definecolor{darkestblue}{rgb}{0, 0.156863, 0.333333}
+\definecolor{lightpurple}{rgb}{0.776471, 0.690196, 0.737255}
+\definecolor{softgreen}{rgb}{0.733333, 0.772549, 0.572549}
+\definecolor{medgreen}{rgb}{0.34, 0.65, 0.34}
+\definecolor{offwhite}{rgb}{0.839216, 0.823529, 0.768627}
+
+\newcommand{\one}{\mbox{\bf 1}}
+\newcommand{\zero}{\mbox{\bf 0}}
+\newcommand{\leafone}{\top}
+\newcommand{\leafzero}{\bot}
+\newcommand{\booland}{\land}
+\newcommand{\boolor}{\lor}
+\newcommand{\boolxor}{\oplus}
+\newcommand{\boolnot}{\neg}
+\newcommand{\tautology}{\top}
+\newcommand{\nil}{\bot}
+\renewcommand{\obar}[1]{\overline{#1}}
+\newcommand{\ite}{\mbox{\it ITE}}
+
+\newcommand{\opname}[1]{\mbox{\sc #1}}
+\newcommand{\andop}{\opname{And}}
+\newcommand{\orop}{\opname{Or}}
+\newcommand{\notop}{\opname{Not}}
+\newcommand{\implyop}{\opname{Imply}}
+\newcommand{\simplifyop}{\opname{Simplify}}
+\newcommand{\constrainop}{\opname{Constrain}}
+\newcommand{\applyop}{\opname{Apply}}
+\newcommand{\applyand}{\opname{ApplyAnd}}
+\newcommand{\applyor}{\opname{ApplyOr}}
+\newcommand{\applyimply}{\opname{ProveImplication}}
+\newcommand{\applyandimply}{\opname{ApplyAndProveImplication}}
+
+
+
+\newcommand{\func}[1]{\llbracket#1\rrbracket}
+
+\newcommand{\turnstile}{\vdash}
+\newcommand{\fname}[1]{\mbox{\small\sf #1}}
+
+\newcommand{\lo}{\fname{Lo}}
+\newcommand{\hi}{\fname{Hi}}
+\newcommand{\var}{\fname{Var}}
+\newcommand{\val}{\fname{Val}}
+\newcommand{\stephd}{\fname{HD}}
+\newcommand{\stephu}{\fname{HU}}
+\newcommand{\stepld}{\fname{LD}}
+\newcommand{\steplu}{\fname{LU}}
+
+\newcommand{\hsc}[1]{{\MakeUppercase{#1}}}
+
+
+\newcommand{\rupbdd}{${\sf RUP}_{\sf  BDD}$}
+\newcommand{\rup}{{\sf RUP}}
+\newcommand{\drat}{{\sf DRAT}}
+
+
+\newcommand{\pgbdd}{{\sffamily\scshape pgbdd}}
+\newcommand{\Pgbdd}{{\sffamily\scshape  Pgbdd}}
+\newcommand{\pgpbs}{{\sffamily\scshape  pgpbs}}
+\newcommand{\Pgpbs}{{\sffamily\scshape  Pgpbs}}
+\newcommand{\kissat}{{\sffamily\scshape kissat}}
+\newcommand{\Kissat}{{\sffamily\scshape  Kissat}}
+\newcommand{\lingeling}{{\sffamily\scshape lingeling}}
+\newcommand{\Lingeling}{{\sffamily\scshape  Lingeling}}
+
+%\newcommand{\pgbdd}{\textsc{pgbdd}}
+%\newcommand{\Pgbdd}{\textsc{Pgbdd}}
+%\newcommand{\pgpbs}{\textsc{pgpbs}}
+%\newcommand{\Pgpbs}{\textsc{Pgpbs}}
+%\newcommand{\kissat}{\textsc{kissat}}
+%\newcommand{\Kissat}{\textsc{Kissat}}
+
+% Code formatting
+\newcommand{\showcomment}[1]{\texttt{/*} \textit{#1} \texttt{*/}}
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\keyif}{\keyword{if}}
+\newcommand{\keyfor}{\keyword{for}}
+\newcommand{\keyelse}{\keyword{else}}
+\newcommand{\keyor}{\keyword{or}}
+\newcommand{\keyreturn}{\keyword{return}}
+\newcommand{\assign}{\ensuremath{\longleftarrow}}
+
+
+
+\newcommand{\interp}{\sigma}
+\newcommand{\interpset}[1]{\Sigma_{#1}}
+\newcommand{\mcount}{\mu}
+
+\newcommand{\ifarg}{\textbf{I}}
+\newcommand{\thenarg}{\textbf{T}}
+\newcommand{\elsearg}{\textbf{E}}
+\newcommand{\depend}{{\it D}}
+
+\newcommand{\subs}[2]{[#2/#1]}
+\newcommand{\substrue}[1]{\subs{#1}{\tautology}}
+\newcommand{\subsfalse}[1]{\subs{#1}{\false}}
+\newcommand{\subsflip}[1]{\subs{#1}{\obar{#1}}}
+
+\newcommand{\amax}{a_{{\rm max}}}
+
+
+\title{Clausal Proofs for Pseudo-Boolean Reasoning \\ Experimental Data}
+
+\titlerunning{Clausal Proofs from Pseudo-Boolean Reasoning}
+
+\author{%
+  Randal E. Bryant\inst{1}
+  \and
+  Armin Biere\inst{2}
+  \and
+  Marijn J. H. Heule\inst{1}
+}
+
+\institute{
+  Carnegie Mellon University, Pittsburgh, PA, United States\\
+  {\tt  \{Randy.Bryant, mheule\}@cs.cmu.edu}
+  \and
+  Albert-Ludwigs University, Freiburg, Germany\\
+  {\tt  biere@cs.uni-freiburg.de}
+}
+
+\authorrunning{R. E. Bryant, A. Biere, and M. J. H. Heule}
+
+\begin{document}
+
+\maketitle
+
+The attached graphs are extracted from the paper ``Clausal Proofs from
+Pseudo-Boolean Reasoning.''  For each one, we show the complete data
+presented in the paper, as well as reduced data generated by from the
+artifact submission.  Although the reproduced results do not
+demonstrate the full scale of the experimental results, they
+demonstrate that our solvers far exceed the capabilities of \kissat{},
+a state-of-the-art CDCL solver.
+
+
+\newpage
+\begin{figure}
+A) Original results
+
+\begin{tikzpicture}[scale = 1.0]
+          \begin{axis}[mark options={scale=0.8},grid=both, grid style={black!10}, xmode=log, ymode=log, legend style={at={(1.00,0.37)}}, legend cell align={left},
+                              x post scale=1.6, xlabel=$m$, xtick={2,4,8,16,32,64}, xticklabels={$2$,$4$,$8$,$16$,$32$,$64$},xmin=2,xmax=64,ymin=10000,ymax=100000000, title={Urquhart Clauses}]
+            \input{original-data/urquhart-simon-kissat}                        
+            \input{original-data/urquhart-simon-bucket}
+            \input{original-data/urquhart-simon-equation}
+            \input{original-data/urquhart-li-bucket}
+            \input{original-data/urquhart-li-equation}
+            \legend{
+              \scriptsize \textsf{Simon, \kissat},
+              \scriptsize \textsf{Simon, \pgbdd, Bucket Elimination},
+              \scriptsize \textsf{Simon, \pgpbs, Mod-2 Equations},
+              \scriptsize \textsf{Li, \pgbdd, Bucket Elimination},
+              \scriptsize \textsf{Li, \pgpbs, Mod-2 Equations},
+            }
+          \end{axis}
+\end{tikzpicture}
+
+B) Reproduced results
+
+\begin{tikzpicture}[scale = 1.0]
+          \begin{axis}[mark options={scale=0.8},grid=both, grid style={black!10}, xmode=log, ymode=log, legend style={at={(1.00,0.37)}}, legend cell align={left},
+                              x post scale=1.6, xlabel=$m$, xtick={2,4,8,16,32,64}, xticklabels={$2$,$4$,$8$,$16$,$32$,$64$},xmin=2,xmax=64,ymin=10000,ymax=100000000, title={Urquhart Clauses}]
+%%            \input{reproduced-data/urquhart-simon-kissat}                        
+            \input{reproduced-data/urquhart-simon-bucket}
+            \input{reproduced-data/urquhart-simon-equation}
+            \input{reproduced-data/urquhart-li-bucket}
+            \input{reproduced-data/urquhart-li-equation}
+            \legend{
+%%              \scriptsize \textsf{Simon, \kissat},
+              \scriptsize \textsf{Simon, \pgbdd, Bucket Elimination},
+              \scriptsize \textsf{Simon, \pgpbs, Mod-2 Equations},
+              \scriptsize \textsf{Li, \pgbdd, Bucket Elimination},
+              \scriptsize \textsf{Li, \pgpbs, Mod-2 Equations},
+            }
+          \end{axis}
+\end{tikzpicture}
+
+\caption{Total number of clauses in proofs of two sets of Urquhart formulas.}
+\label{fig:data:urquhart}
+\end{figure}  
+
+\newpage
+\begin{figure}
+A) Original results
+
+\begin{tikzpicture}[scale = 1.0]
+          \begin{axis}[mark options={scale=0.8},grid=both, grid style={black!10}, xmode=log, ymode=log, legend style={at={(1.00,0.30)}}, legend cell align={left},
+                              x post scale=1.6, xlabel=$n$, xtick={4,8,16,32,64,128}, xticklabels={$4$,$8$,$16$,$32$,$64$,$128$},xmin=4,xmax=128,ymin=1000,ymax=100000000, title={Mutilated Chessboard Clauses}]
+            \input{original-data/chess-kissat}
+            \input{original-data/chess-equation-integer}
+            \input{original-data/chess-column}
+            \input{original-data/chess-equation-mod3}
+            \legend{
+              \scriptsize \textsf{\kissat},
+              \scriptsize \textsf{\pgpbs, Integer Equations, Input Order},
+              \scriptsize \textsf{\pgbdd, Column Scan, Input Order},
+              \scriptsize \textsf{\pgpbs, Mod-3 Equations, Input Order},
+            }
+          \end{axis}
+\end{tikzpicture}
+
+B) Reproduced results
+
+\begin{tikzpicture}[scale = 1.0]
+          \begin{axis}[mark options={scale=0.8},grid=both, grid style={black!10}, xmode=log, ymode=log, legend style={at={(1.00,0.30)}}, legend cell align={left},
+                              x post scale=1.6, xlabel=$n$, xtick={4,8,16,32,64,128}, xticklabels={$4$,$8$,$16$,$32$,$64$,$128$},xmin=4,xmax=128,ymin=1000,ymax=100000000, title={Mutilated Chessboard Clauses}]
+%%            \input{reproduced-data/chess-kissat}
+            \input{reproduced-data/chess-equation-integer}
+            \input{reproduced-data/chess-column}
+            \input{reproduced-data/chess-equation-mod3}
+            \legend{
+%%              \scriptsize \textsf{\kissat},
+              \scriptsize \textsf{\pgpbs, Integer Equations, Input Order},
+              \scriptsize \textsf{\pgbdd, Column Scan, Input Order},
+              \scriptsize \textsf{\pgpbs, Mod-3 Equations, Input Order},
+            }
+          \end{axis}
+\end{tikzpicture}
+
+\caption{Total number of clauses in proofs of $n \times n$ mutilated
+chess board problems.}% using different types of solvers.}
+\label{fig:data:chess-baseline}
+\end{figure}  
+
+\newpage
+\begin{figure}
+
+A) Original results
+
+\begin{tikzpicture}[scale = 1.0]
+          \begin{axis}[mark options={scale=0.8},grid=both, grid style={black!10}, xmode=log, ymode=log, legend style={at={(0.99,0.30)}}, legend cell align={left},
+                              x post scale=1.6, xlabel=$n$, xtick={4,8,16,32,64,128}, xticklabels={$4$,$8$,$16$,$32$,$64$,$128$},xmin=4,xmax=128,ymin=1000,ymax=100000000, title={Mutilated Chess Board/Torus Clauses}]
+             \input{original-data/chess-board-column-randomorder}
+            \input{original-data/chess-torus-column}          
+            \input{original-data/chess-torus-equation-randomorder}
+             \input{original-data/chess-board-equation-randomorder}
+            \legend{
+              \scriptsize \textsf{Board, \pgbdd, Column Scan, Random Order}, 
+              \scriptsize \textsf{Torus, \pgbdd, Column Scan, Input Order}, 
+              \scriptsize \textsf{Torus, \pgpbs, Autodetect, Random Order}, 
+              \scriptsize \textsf{Board, \pgpbs, Autodetect, Random Order}, 
+            }
+          \end{axis}
+\end{tikzpicture}
+
+B) Reproduced results
+
+\begin{tikzpicture}[scale = 1.0]
+          \begin{axis}[mark options={scale=0.8},grid=both, grid style={black!10}, xmode=log, ymode=log, legend style={at={(0.99,0.30)}}, legend cell align={left},
+                              x post scale=1.6, xlabel=$n$, xtick={4,8,16,32,64,128}, xticklabels={$4$,$8$,$16$,$32$,$64$,$128$},xmin=4,xmax=128,ymin=1000,ymax=100000000, title={Mutilated Chess Board/Torus Clauses}]
+             \input{reproduced-data/chess-board-column-randomorder}
+            \input{reproduced-data/chess-torus-column}          
+            \input{reproduced-data/chess-torus-equation-randomorder}
+             \input{reproduced-data/chess-board-equation-randomorder}
+            \legend{
+              \scriptsize \textsf{Board, \pgbdd, Column Scan, Random Order}, 
+              \scriptsize \textsf{Torus, \pgbdd, Column Scan, Input Order}, 
+              \scriptsize \textsf{Torus, \pgpbs, Autodetect, Random Order}, 
+              \scriptsize \textsf{Board, \pgpbs, Autodetect, Random Order}, 
+            }
+          \end{axis}
+\end{tikzpicture}
+
+
+\caption{Stress Testing: Changing the topology and variable ordering for mutilated chess.
+Autodetection enables the PB solver to use modulo-3 arithmetic.}
+\label{fig:data:chess-stressed}
+\end{figure}  
+
+\newpage
+
+\begin{figure}
+A) Original results
+
+\begin{tikzpicture}[scale = 1.0]
+          \begin{axis}[mark options={scale=0.8},grid=both, grid style={black!10}, xmode=log, ymode=log, legend style={at={(1.00,0.42)}}, legend cell align={left},
+                              x post scale=1.6, y post scale=1.15, xlabel=$n$, xtick={4,8,16,32,64,128, 256}, xticklabels={$4$,$8$,$16$,$32$,$64$,$128$},xmin=4,xmax=140,ymin=100,ymax=100000000, title={Pigeonhole Clauses}]
+            \input{original-data/pigeon-direct-kissat}
+            \input{original-data/pigeon-sinz-kissat}
+            \input{original-data/pigeon-direct-linear-inputorder}
+            \input{original-data/pigeon-direct-constraint-randomorder}
+            \input{original-data/pigeon-sinz-equation-randomorder}
+            \input{original-data/pigeon-sinz-column-inputorder}
+            \input{original-data/pigeon-direct-cook}
+ 
+            \legend{
+              \scriptsize \textsf{Direct, \kissat},
+              \scriptsize \textsf{Sinz, \kissat},
+              \scriptsize \textsf{Direct, \pgbdd, Linear, Input Order},
+              \scriptsize \textsf{Direct, \pgpbs, Constraints, Random Order\!\!\!},
+              \scriptsize \textsf{Sinz, \pgpbs, Equations, Random Order},
+              \scriptsize \textsf{Sinz, \pgbdd, Column Scan, Input Order},
+              \scriptsize \textsf{Direct, Cook's Proof},
+            }
+          \end{axis}
+\end{tikzpicture}
+
+B) Reproduced results
+
+\begin{tikzpicture}[scale = 1.0]
+          \begin{axis}[mark options={scale=0.8},grid=both, grid style={black!10}, xmode=log, ymode=log, legend style={at={(1.00,0.42)}}, legend cell align={left},
+                              x post scale=1.6, y post scale=1.15, xlabel=$n$, xtick={4,8,16,32,64,128, 256}, xticklabels={$4$,$8$,$16$,$32$,$64$,$128$},xmin=4,xmax=140,ymin=100,ymax=100000000, title={Pigeonhole Clauses}]
+            \input{reproduced-data/pigeon-direct-linear-inputorder}
+            \input{reproduced-data/pigeon-direct-constraint-randomorder}
+            \input{reproduced-data/pigeon-sinz-equation-randomorder}
+            \input{reproduced-data/pigeon-sinz-column-inputorder}
+            \input{reproduced-data/pigeon-direct-cook}
+ 
+            \legend{
+              \scriptsize \textsf{Direct, \pgbdd, Linear, Input Order},
+              \scriptsize \textsf{Direct, \pgpbs, Constraints, Random Order\!\!\!},
+              \scriptsize \textsf{Sinz, \pgpbs, Equations, Random Order},
+              \scriptsize \textsf{Sinz, \pgbdd, Column Scan, Input Order},
+              \scriptsize \textsf{Direct, Cook's Proof},
+            }
+          \end{axis}
+\end{tikzpicture}
+
+\caption{Total number of clauses in proofs of pigeonhole problem for $n$ holes}
+\label{fig:data:pigeonhole}
+\end{figure}  
+
+\end{document}

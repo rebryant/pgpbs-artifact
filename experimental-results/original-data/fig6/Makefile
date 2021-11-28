@@ -67,7 +67,7 @@ data:
 	$(GRABBER) chess-board-*-column-randomorder.data > chess-board-column-randomorder.csv
 	$(GRABBER) chess-torus-*-column.data > chess-torus-column.csv
 	$(GRABBER) chess-torus-*-equation-auto-randomorder.data > chess-torus-equation-randomorder.csv
-	$(GRABBER) chess-board-*-equation-randomorder.data > chess-board-equation-randomorder.csv
+	$(GRABBER) chess-board-*-equation-auto-randomorder.data > chess-board-equation-randomorder.csv
 
 clean:
 	rm -f *~
