@@ -113,6 +113,8 @@ rdata:
 
 
 clean:
-
 	rm -f *~ *.log *.aux *.pdf
+	rm -rf original-data reproduced-data
 
+
+superclean: clean

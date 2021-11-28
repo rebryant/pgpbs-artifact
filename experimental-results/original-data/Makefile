@@ -3,6 +3,8 @@ clean:
 	(cd fig5; make clean)
 	(cd fig6; make clean)
 	(cd fig7; make clean)
+	rm -rf csv/
+	rm -f *~
 
 superclean:
 	(cd fig4; make superclean)

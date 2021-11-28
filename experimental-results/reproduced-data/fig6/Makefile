@@ -82,4 +82,4 @@ clean:
 
 superclean: clean
 	rm -f *.cnf *.lrat *.lratb *.order *.schedule
-	rm -f *.csv *.data
+	rm -f *.data
