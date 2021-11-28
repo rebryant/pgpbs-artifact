@@ -71,6 +71,7 @@ data:
 
 clean:
 	rm -f *~
+	rm -f *.csv
 
 superclean: clean
 	rm -f *.cnf *.lrat *.lratb *.order *.schedule *.buckets

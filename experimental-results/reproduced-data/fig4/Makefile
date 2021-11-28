@@ -68,7 +68,8 @@ data:
 
 clean:
 	rm -f *~
+	rm -f *.csv	
 
 superclean: clean
-	rm -f *.lrat *.lratb *.order *.schedule *.csv
+	rm -f *.lrat *.lratb *.order *.schedule
 	rm -f *.data

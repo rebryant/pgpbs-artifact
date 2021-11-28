@@ -11,6 +11,10 @@ superclean:
 	(cd fig7; make superclean)
 
 data:
+	(cd fig4; make data)
+	(cd fig5; make data)
+	(cd fig6; make data)
+	(cd fig7; make data)
 	rm -rf csv
 	mkdir csv
 	cp -p */*.csv csv
