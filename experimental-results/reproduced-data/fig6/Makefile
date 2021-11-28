@@ -7,7 +7,7 @@ SDIR=../../../src
 CDIR=../../code
 LDIR=../../../lrat
 
-GENERATOR=$(CDIR)/chess.py
+GENERATOR=$(INTERP) $(CDIR)/chess.py
 PGBDD=$(INTERP) $(SDIR)/pgbdd.py
 PGPBS=$(INTERP) $(SDIR)/pgpbs.py
 RANDOMIZER = $(INTERP) $(CDIR)/randomizer.py
