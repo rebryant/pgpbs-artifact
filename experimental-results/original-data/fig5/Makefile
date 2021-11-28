@@ -14,8 +14,7 @@ RANDOMIZER = $(INTERP) $(CDIR)/randomizer.py
 EXTRACTOR = $(INTERP)  $(SDIR)/constraint_extractor.py
 CHECKER = $(LDIR)/lrat-check
 GRABBER =$(INTERP)  $(CDIR)/grab_clauses.py
-EXTENSION = lrat
-
+CGRABBER = $(INTERP) $(CDIR)/grab_clauses_cdcl.py
 EXTENSION = lrat
 
 cs: chess-$(N)-column.data
@@ -53,6 +52,8 @@ data:
 	$(GRABBER) chess-*-column.data > chess-column.csv
 	$(GRABBER) chess-*-equation-mod3.data > chess-equation-mod3.csv
 	$(GRABBER) chess-*-equation-integer.data > chess-equation-integer.csv
+	$(CGRABBER) chess-*-cdcl.data > chess-kissat.csv	
+
 
 clean:
 	rm -f *~

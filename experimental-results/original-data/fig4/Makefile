@@ -72,6 +72,7 @@ data:
 	$(GRABBER) urquhart-li-*-ro-equation.data > urquhart-li-equation.csv
 	$(GRABBER) urquhart-simon-*-randomorder.data > urquhart-simon-bucket.csv
 	$(GRABBER) urquhart-simon-*-ro-equation.data > urquhart-simon-equation.csv
+	$(CGRABBER) urquhart-simon-*-cdcl.data > urquhart-simon-kissat.csv	
 
 clean:
 	rm -f *~

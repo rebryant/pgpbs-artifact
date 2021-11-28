@@ -1,0 +1,178 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c KISSAT SAT Solver
+c Copyright (c) 2019-2020 Armin Biere JKU Linz
+c 
+c Version 1.0.3 baef4609163f542dc08f43aef02ce8da0581a2b5
+c Apple clang version 11.0.3 (clang-1103.0.32.29) -W -Wall -O3 -DNEMBEDDED -DNDEBUG -DNMETRICS -DNSTATISTICS
+c Fri Aug 14 18:37:24 EDT 2020 Darwin BRYANT-MC2.VLSI.CS.CMU.EDU 19.5.0 x86_64
+c
+c ---- [ proving ] -----------------------------------------------------------
+c
+c opened and writing proof to DRAT file:
+c 
+c   urquhart-simon-03-01-cdcl.drat
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c 
+c   urquhart-simon-03-01-cdcl.cnf
+c 
+c parsed 'p cnf 39 266' header
+c closing input after reading 6683 bytes (7 KB)
+c finished parsing after 0.00 seconds
+c
+c ---- [ options ] -----------------------------------------------------------
+c
+c --stable=0                       (different from default '1')
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c  seconds reductions redundant irredundant
+c         MB   restarts    trail  variables
+c          level  conflicts   glue    remaining
+c
+c *  0.00  0 0  0  0   0   0 0% 0 266 39 98%
+c {  0.00  0 0  0  0   0   0 0% 0 266 39 98%
+c -  0.00  0 18  1  0 301  60 95% 9 266 39 98%
+c d  0.00  0 17  1  0 402 102 94% 9 264 38 95%
+c -  0.01  0 17  2  0 901 139 87% 9 264 38 95%
+c O  0.01  0 17  2  0 1002 182 86% 9 264 38 95%
+c u  0.01  0 16  2  0 1205 270 84% 9 264 38 95%
+c -  0.01  0 15  3  0 1802 229 78% 9 264 38 95%
+c e  0.01  0 14  3  0 2001 313 77% 9 264 37 92%
+c ^  0.01  0 14  3  0 2001 313 77% 9 264 37 92%
+c u  0.01  0 14  3  0 2407 384 76% 8 264 37 92%
+c -  0.02  0 14  4  0 3003 224 74% 8 264 37 92%
+c I  0.02  0 14  4  0 3004 225 74% 8 264 37 92%
+c u  0.02  0 15  4  4 4009 624 80% 8 264 37 92%
+c -  0.03  0 15  5 69 4505 319 78% 9 264 37 92%
+c ^  0.03  0 14  5 69 6003 931 77% 9 264 37 92%
+c B  0.03  0 14  5 69 6007 933 77% 9 264 37 92%
+c u  0.03  0 14  5 69 6009 846 77% 9 264 37 92%
+c -  0.04  0 14  6 69 6306 335 76% 9 264 37 92%
+c -  0.05  0 14  7 69 8407 507 75% 9 264 37 92%
+c
+c  seconds  reductions  redundant irredundant
+c         MB    restarts      trail  variables
+c          level   conflicts     glue    remaining
+c
+c u  0.05  0 14  7 69 8412 392 75% 9 264 37 92%
+c W  0.06  0 13  7 69 10009 1060 75% 8 264 37 92%
+c -  0.07  0 13  8 69 10810 561 74% 8 264 37 92%
+c u  0.07  0 13  8 69 11213 458 74% 8 264 37 92%
+c ^  0.08  0 13  8 69 12004 789 74% 8 264 37 92%
+c -  0.08  0 13  9 69 13511 713 75% 8 264 37 92%
+c u  0.09  0 13  9 69 14415 590 75% 8 264 37 92%
+c O  0.09  0 13  9 69 15011 840 74% 8 264 37 92%
+c -  0.10  0 13 10 69 16511 705 74% 8 264 37 92%
+c u  0.11  0 13 10 69 18017 899 74% 8 264 37 92%
+c -  0.12  0 13 11 69 19814 678 74% 8 264 37 92%
+c e  0.12  0 13 11 69 20004 757 74% 8 272 35 88%
+c ^  0.12  0 13 11 69 20004 757 74% 8 272 35 88%
+c B  0.12  0 13 11 136 21012 1151 74% 8 272 35 88%
+c u  0.13  0 12 11 204 22018 1147 74% 8 272 35 88%
+c -  0.14  0 12 12 204 23416 763 74% 8 272 35 88%
+c u  0.16  0 12 12 275 26419 1093 74% 8 272 35 88%
+c v  0.16  0 12 12 275 26419 1086 74% 8 272 35 88%
+c -  0.16  0 12 13 308 27318 537 74% 8 272 35 88%
+c W  0.17  0 12 13 308 28015 827 74% 8 272 35 88%
+c
+c  seconds  reductions    redundant irredundant
+c         MB    restarts         trail  variables
+c          level     conflicts      glue    remaining
+c
+c ^  0.18  0 12 13 308 30005 1655 74% 8 272 35 88%
+c u  0.19  0 12 13 308 31221 1375 74% 8 272 35 88%
+c -  0.20  0 12 14 308 31520 590 74% 8 272 35 88%
+c I  0.21  0 12 14 683 36017 2421 74% 8 272 35 88%
+c -  0.22  0 12 15 683 36020 1293 74% 8 272 35 88%
+c u  0.22  0 12 15 683 36421 752 74% 8 272 35 88%
+c v  0.22  0 12 15 683 36421 736 74% 8 272 35 88%
+c w  0.22  0 12 15 683 36421 736 74% 8 272 35 88%
+c -  0.24  0 12 16 875 40821 1310 74% 8 272 35 88%
+c 2  0.25  0 12 16 875 42007 1803 74% 8 269 35 88%
+c !  0.25  0 12 16 875 42007 1803 74% 8 269 35 88%
+c t  0.25  0 12 16 875 42023 1810 74% 8 269 35 88%
+c u  0.25  0 12 16 875 42023 937 74% 8 269 35 88%
+c B  0.26  0 11 16 1077 45020 2188 74% 7 269 35 88%
+c -  0.27  0 11 17 1278 45921 1334 74% 7 269 35 88%
+c u  0.28  0 11 17 1417 48024 1347 74% 8 269 35 88%
+c v  0.28  0 11 17 1417 48024 1339 74% 8 269 35 88%
+c -  0.30  0 11 18 1608 51324 1237 74% 8 269 35 88%
+c u  0.32  0 11 18 1790 54426 1684 75% 8 269 35 88%
+c W  0.33  0 11 18 1790 55021 1932 75% 8 269 35 88%
+c
+c  seconds  reductions     redundant irredundant
+c         MB     restarts         trail  variables
+c          level      conflicts      glue    remaining
+c
+c -  0.35  0 11 19 1790 57025 1231 75% 7 269 35 88%
+c i  0.35  0 11 19 1790 58184 1678 75% 7 269 34 85%
+c i  0.35  0 11 19 1790 58395 1708 75% 7 269 33 82%
+c i  0.35  0 11 19 1790 58625 1714 75% 7 269 32 80%
+c i  0.35  0 11 19 1790 58759 1726 75% 7 269 31 78%
+c i  0.35  0 11 19 1790 58805 1725 75% 7 269 30 75%
+c i  0.35  0 11 19 1790 58827 1727 75% 7 269 29 72%
+c i  0.35  0 11 19 1790 58837 1729 75% 7 269 28 70%
+c i  0.35  0 11 19 1790 58841 1729 75% 7 269 25 62%
+c i  0.35  0 11 19 1790 58844 1729 75% 7 269 24 60%
+c e  0.35  0 11 19 1790 58844 1691 75% 7 102 17 42%
+c }  0.35  0 11 19 1790 58844 1691 75% 7 102 17 42%
+c 0  0.35  0 11 19 1790 58844 1691 75% 7 102 17 42%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           0.28   78.52 %  search
+c           0.28   78.51 %  focused
+c           0.08   21.32 %  simplify
+c           0.04   11.74 %  probe
+c           0.04   10.67 %  vivify
+c           0.03    9.33 %  reduce
+c           0.03    9.00 %  walking
+c           0.00    0.90 %  substitute
+c           0.00    0.52 %  eliminate
+c           0.00    0.10 %  parse
+c           0.00    0.07 %  transitive
+c           0.00    0.06 %  autarky
+c           0.00    0.05 %  ternary
+c           0.00    0.03 %  failed
+c =============================================
+c           0.35  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                            58844           166529.88 per second
+c decisions:                            36705                0.62 per conflict
+c propagations:                        188785           534266    per second
+c reductions:                              19             3097    interval
+c rephased:                                10             5884    interval
+c restarts:                              1790               32.87 interval
+c
+c ---- [ proof ] -------------------------------------------------------------
+c
+c proof_added:                          49319               51 %  per line
+c proof_bytes:                        4851808                5 MB 
+c proof_deleted:                        47781               49 %  per line
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:       3082813440 bytes       2940 MB
+c process-time:                             0s               0.35 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20
+c parsing input formula with 39 variables and 266 clauses
+c finished parsing
+c detected empty clause; start verification via backward checking
+c 266 of 266 clauses in core                            
+c 48550 of 49320 lemmas in core using 186537 resolution steps
+c 0 RAT lemmas in core; 13 redundant literals in core lemmas
+s VERIFIED
+c verification time: 0.401 seconds

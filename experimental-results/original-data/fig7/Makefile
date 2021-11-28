@@ -15,6 +15,7 @@ RANDOMIZER = $(INTERP) $(CDIR)/randomizer.py
 EXTRACTOR = $(INTERP)  $(SDIR)/constraint_extractor.py
 CHECKER = $(LDIR)/lrat-check
 GRABBER =$(INTERP)  $(CDIR)/grab_clauses.py
+CGRABBER = $(INTERP) $(CDIR)/grab_clauses_cdcl.py
 EXTENSION = lrat
 
 dl: pigeon-direct-$(N)-pm-linear.data
@@ -79,6 +80,8 @@ data:
 	$(GRABBER) pigeon-direct-*-constraint-randomorder.data > pigeon-direct-constraint-randomorder.csv
 	$(GRABBER) pigeon-tseitin-*-equation-randomorder.data > pigeon-sinz-equation-randomorder.csv
 	$(GRABBER) pigeon-direct-*-cook.data > pigeon-direct-cook.csv
+	$(CGRABBER) pigeon-direct-*-cdcl.data > pigeon-direct-kissat.csv	
+	$(CGRABBER) pigeon-tseitin-*-cdcl.data > pigeon-sinz-kissat.csv	
 
 clean:
 	rm -f *~
