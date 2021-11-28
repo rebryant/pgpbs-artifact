@@ -7,7 +7,6 @@ SEED=123456
 SDIR=../../../src
 CDIR=../../code
 LDIR=../../../lrat
-CNFDIR=../../original-data/fig4
 
 PGBDD=$(INTERP) $(SDIR)/pgbdd.py
 PGPBS=$(INTERP) $(SDIR)/pgpbs.py
@@ -29,7 +28,7 @@ sro: urquhart-simon-$(M)-$(SEED)-randomorder.data
 sre: urquhart-simon-$(M)-$(SEED)-ro-equation.data
 
 urquhart-li-$(M)-randomorder.data:
-	$(RANDOMIZER) $(CNFDIR)/urquhart-li-$(M).cnf $(SEED)
+	$(RANDOMIZER) urquhart-li-$(M).cnf $(SEED)
 	$(PGBDD) -v $(VLEVEL) -i urquhart-li-$(M).cnf -b -p urquhart-li-$(M).order \
 		-o urquhart-li-$(M)-randomorder.$(EXTENSION) 2>&1 | tee -a urquhart-li-$(M)-randomorder.data
 	$(CHECKER) urquhart-li-$(M).cnf urquhart-li-$(M)-randomorder.$(EXTENSION) | tee -a urquhart-li-$(M)-randomorder.data

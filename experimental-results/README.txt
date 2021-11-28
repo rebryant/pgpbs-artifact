@@ -21,11 +21,9 @@ Subdirectories:
       numbers in the paper.
 
   reproduced-results:
-
       The files needed to reproduce a portion of the experimental
-      results.  These are organized into
-      files fig4, fig5, fig6, and fig7, corresponding to the figure
-      numbers in the paper.
+      results.  These are organized into files fig4, fig5, fig6, and
+      fig7, corresponding to the figure numbers in the paper.
 
   doc:
       The files required to generate the graph document

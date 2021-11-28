@@ -24,14 +24,14 @@ test-pgbdd: install
 	cd benchmarks; make test-pgbdd
 
 clean:
-	cd benchmarks; make clean
+	cd demo; make clean
 	cd experimental-results; make clean
 	cd lrat; make clean
 	cd src; make clean
 	rm -f *~ *results*.txt
 
 superclean:
-	cd benchmarks; make superclean
+	cd demo; make superclean
 	cd experimental-results; make superclean
 	cd lrat; make clean
 	cd src; make clean
