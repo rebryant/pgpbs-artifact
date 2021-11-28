@@ -1,0 +1,82 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c KISSAT SAT Solver
+c Copyright (c) 2019-2020 Armin Biere JKU Linz
+c 
+c Version 1.0.3 baef4609163f542dc08f43aef02ce8da0581a2b5
+c Apple clang version 11.0.3 (clang-1103.0.32.29) -W -Wall -O3 -DNEMBEDDED -DNDEBUG -DNMETRICS -DNSTATISTICS
+c Fri Aug 14 18:37:24 EDT 2020 Darwin BRYANT-MC2.VLSI.CS.CMU.EDU 19.5.0 x86_64
+c
+c ---- [ proving ] -----------------------------------------------------------
+c
+c opened and writing proof to DRAT file:
+c 
+c   pigeon-direct-004-cdcl.drat
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c 
+c   pigeon-direct-004-cdcl.cnf
+c 
+c parsed 'p cnf 20 45' header
+c closing input after reading 1088 bytes (1 KB)
+c finished parsing after 0.00 seconds
+c
+c ---- [ options ] -----------------------------------------------------------
+c
+c --stable=0                       (different from default '1')
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c  seconds reductions redundant irredundant
+c         MB   restarts    trail variables
+c          level  conflicts   glue   remaining
+c
+c *  0.00  0 0  0  0   0   0 0% 0 45 17 94%
+c {  0.00  0 0  0  0   0   0 0% 0 45 17 94%
+c i  0.00  0 2  0  0   7   6 98% 1 45 16 89%
+c }  0.00  0 2  0  0  16  11 85% 1 45  1 6%
+c 0  0.00  0 2  0  0  16  11 85% 1 45  1 6%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           0.00   26.54 %  search
+c           0.00   19.08 %  focused
+c           0.00   17.32 %  parse
+c           0.00    0.00 %  simplify
+c =============================================
+c           0.00  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                               16             7843.14 per second
+c decisions:                               16                1.00 per conflict
+c propagations:                           138            67647    per second
+c
+c ---- [ proof ] -------------------------------------------------------------
+c
+c proof_added:                             15               94 %  per line
+c proof_bytes:                            180                0 MB 
+c proof_deleted:                            1                6 %  per line
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:        952107008 bytes        908 MB
+c process-time:                             0s               0.00 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20
+c parsing input formula with 20 variables and 45 clauses
+c finished parsing
+c detected empty clause; start verification via backward checking
+c 42 of 45 clauses in core                            
+c 14 of 16 lemmas in core using 126 resolution steps
+c 0 RAT lemmas in core; 0 redundant literals in core lemmas
+s VERIFIED
+c verification time: 0.120 seconds

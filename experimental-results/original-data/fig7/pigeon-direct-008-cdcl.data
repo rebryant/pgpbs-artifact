@@ -1,0 +1,129 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c KISSAT SAT Solver
+c Copyright (c) 2019-2020 Armin Biere JKU Linz
+c 
+c Version 1.0.3 baef4609163f542dc08f43aef02ce8da0581a2b5
+c Apple clang version 11.0.3 (clang-1103.0.32.29) -W -Wall -O3 -DNEMBEDDED -DNDEBUG -DNMETRICS -DNSTATISTICS
+c Fri Aug 14 18:37:24 EDT 2020 Darwin BRYANT-MC2.VLSI.CS.CMU.EDU 19.5.0 x86_64
+c
+c ---- [ proving ] -----------------------------------------------------------
+c
+c opened and writing proof to DRAT file:
+c 
+c   pigeon-direct-008-cdcl.drat
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c 
+c   pigeon-direct-008-cdcl.cnf
+c 
+c parsed 'p cnf 72 297' header
+c closing input after reading 3698 bytes (4 KB)
+c finished parsing after 0.00 seconds
+c
+c ---- [ options ] -----------------------------------------------------------
+c
+c --stable=0                       (different from default '1')
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c  seconds reductions redundant irredundant
+c         MB   restarts    trail  variables
+c          level  conflicts   glue    remaining
+c
+c *  0.00  0 0  0  0   0   0 0% 0 297 65 98%
+c {  0.00  0 0  0  0   0   0 0% 0 297 65 98%
+c -  0.00  0 9  1  0 300 148 94% 7 297 65 98%
+c f  0.00  0 8  1  0 401 218 94% 6 297 65 98%
+c u  0.00  0 8  1  0 401 188 94% 6 297 65 98%
+c v  0.00  0 8  1  0 401 185 94% 6 297 65 98%
+c -  0.01  0 9  2 40 900 467 92% 6 297 65 98%
+c O  0.01  0 9  2 51 1004 541 91% 6 297 65 98%
+c f  0.01  0 8  2 60 1201 690 90% 6 297 65 98%
+c u  0.02  0 8  2 60 1201 649 90% 6 297 65 98%
+c v  0.02  0 8  2 60 1201 634 90% 6 297 65 98%
+c i  0.02  0 8  2 60 1301 696 90% 6 297 64 97%
+c -  0.02  0 9  3 126 1806 865 91% 6 289 64 97%
+c i  0.03  0 8  3 126 1990 981 92% 6 289 63 95%
+c e  0.03  0 8  3 126 2001 987 92% 6 256 54 82%
+c ^  0.03  0 8  3 126 2001 987 92% 6 256 54 82%
+c f  0.03  0 9  3 147 2402 275 93% 6 256 54 82%
+c u  0.03  0 9  3 147 2402 208 93% 6 256 54 82%
+c v  0.03  0 9  3 147 2402 205 93% 6 256 54 82%
+c i  0.03  0 8  3 147 2526 261 92% 6 256 53 80%
+c
+c  seconds reductions   redundant irredundant
+c         MB   restarts       trail  variables
+c          level   conflicts     glue    remaining
+c
+c i  0.04  0 9  3 201 2941 519 92% 6 256 52 79%
+c I  0.04  0 9  3 201 3005 557 92% 6 256 52 79%
+c -  0.04  0 9  4 201 3006 239 92% 6 241 52 79%
+c i  0.04  0 9  4 317 3607 652 93% 6 241 51 77%
+c i  0.04  0 9  4 317 3820 773 92% 6 241 50 76%
+c f  0.05  0 9  4 322 4002 849 92% 6 241 50 76%
+c u  0.05  0 9  4 322 4002 750 92% 6 241 50 76%
+c v  0.05  0 9  4 322 4002 727 92% 6 241 50 76%
+c -  0.06  0 9  5 357 4507 806 92% 6 227 50 76%
+c i  0.06  0 9  5 397 5161 1168 91% 6 227 34 52%
+c i  0.06  0 9  5 397 5186 1175 91% 6 227 26 39%
+c i  0.06  0 9  5 397 5187 1175 91% 6 227 25 38%
+c i  0.06  0 9  5 397 5194 1175 91% 6 227 19 29%
+c }  0.06  0 9  5 397 5196 1175 91% 6 227  0 0%
+c 0  0.06  0 9  5 397 5196 1175 91% 6 227  0 0%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           0.05   72.12 %  search
+c           0.05   72.07 %  focused
+c           0.02   27.24 %  simplify
+c           0.02   23.34 %  probe
+c           0.01   19.13 %  vivify
+c           0.00    4.63 %  reduce
+c           0.00    3.85 %  eliminate
+c           0.00    3.10 %  substitute
+c           0.00    0.77 %  failed
+c           0.00    0.29 %  parse
+c           0.00    0.23 %  transitive
+c           0.00    0.05 %  ternary
+c           0.00    0.05 %  autarky
+c =============================================
+c           0.06  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                             5196            79159.05 per second
+c decisions:                             6190                1.19 per conflict
+c propagations:                        110694          1686380    per second
+c reductions:                               5             1039    interval
+c rephased:                                 2             2598    interval
+c restarts:                               397               13.09 interval
+c
+c ---- [ proof ] -------------------------------------------------------------
+c
+c proof_added:                           5710               55 %  per line
+c proof_bytes:                         530702                1 MB 
+c proof_deleted:                         4593               45 %  per line
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:       2457862144 bytes       2344 MB
+c process-time:                             0s               0.06 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20
+c parsing input formula with 72 variables and 297 clauses
+c finished parsing
+c detected empty clause; start verification via backward checking
+c 294 of 297 clauses in core                            
+c 4802 of 5711 lemmas in core using 57658 resolution steps
+c 0 RAT lemmas in core; 816 redundant literals in core lemmas
+s VERIFIED
+c verification time: 0.173 seconds
