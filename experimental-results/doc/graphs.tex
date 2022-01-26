@@ -128,9 +128,9 @@ each of the four figures in the paper:
   of pigeons to holes can be encoded either {\em directly} requiring
   $O(n^2)$ clauses per constraint, or via an encoding due to Sinz,
   requiring $O(n)$ clauses.  \Kissat{} scales exponentially for either
-  encoding, as does \pgbdd{} for a direct encoding.  \Pgbdd{} can
+  encoding, as does \pgbdd{} for a direct encoding (using a tree of conjunctions to reduce BDD representations of the clauses to a single BDD).  \Pgbdd{} can
   achieve $O(n^3)$ scaling on the Sinz encoding with careful guidance
-  from the user.  \Pgpbs{} can achieve $O(n^5)$ encoding with either
+xo  from the user.  \Pgpbs{} can achieve $O(n^5)$ encoding with either
   encoding and with no guidance, or $O(n^3)$ performance when the
   at-most-one constraints are tightened to exactly-one constraints.
   Finally, Cook showed an inductive approach to proving the
@@ -297,7 +297,7 @@ A) Original results
             \legend{
               \scriptsize \textsf{Direct, \kissat},
               \scriptsize \textsf{Sinz, \kissat},
-              \scriptsize \textsf{Direct, \pgbdd, Linear, Input Order},
+              \scriptsize \textsf{Direct, \pgbdd, Tree, Input Order},
               \scriptsize \textsf{Direct, \pgpbs, Constraints, Random Order\!\!\!},
               \scriptsize \textsf{Sinz, \pgpbs, Equations, Random Order},
               \scriptsize \textsf{Sinz, \pgbdd, Column Scan, Input Order},
@@ -318,7 +318,7 @@ B) Reproduced results
             \input{reproduced-data/pigeon-direct-cook}
  
             \legend{
-              \scriptsize \textsf{Direct, \pgbdd, Linear, Input Order},
+              \scriptsize \textsf{Direct, \pgbdd, Tree, Input Order},
               \scriptsize \textsf{Direct, \pgpbs, Constraints, Random Order\!\!\!},
               \scriptsize \textsf{Sinz, \pgpbs, Equations, Random Order},
               \scriptsize \textsf{Sinz, \pgbdd, Column Scan, Input Order},

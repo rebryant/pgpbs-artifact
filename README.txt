@@ -19,16 +19,16 @@ automatically invoked when running the benchmarks.
 PAPER RESULTS
 
 This artifact accompanies the paper ``Clausal Proofs for
-Pseudo-Boolean Reasoning,'' submitted to TACAS 2022.  A copy of the
-paper is included in the archive.  The subdirectory
-`experimental-results' includes the full data from the paper, as well
-as the ability to generate either (1) some or (2) most of that data,
-depending on the available computing resources.  The ability to
-reproduce the full results is subject to the following limitations:
+Pseudo-Boolean Reasoning,'' to be published at TACAS 2022.  The
+subdirectory `experimental-results' includes the full data from the
+paper, as well as the ability to generate either (1) some or (2) most
+of that data, depending on the available computing resources.  The
+ability to reproduce the full results is subject to the following
+limitations:
 
 * We have not included the KISSAT SAT solver in our distribution.
   That prevents generating the results we used to compare our solvers
-  to traditional CDCL solvers.  The original data from KISSAT is included.
+  to traditional CDCL solvers.  The original data from KISSAT are included.
 
 * For the two sets of Urquhart benchmarks, we used generators that we
   are not authorized to redistribute.  Instead, we have included CNF
@@ -46,23 +46,6 @@ from the paper and those that are reproduced from this artifact, and a
 brief explanation of their signicance.  This document is generated
 automatically using the original and reproduced data.
 
-DEMOS
-
-The archive includes the capability to run two classes of
-demonstration benchmarks:
-  * Cardinality problems: Based on constraints among mismatched sets
-  * Parity problems: Based on exclusive-or operations
-
-All benchmark problems are unsatisfiable.  The task is to generate a
-proof of unsatisfiability.  Among all existing proof-generating SAT
-solvers that we know, only PGPBS can generate an unsatisfiability
-proof for any of the cardinality benchmarks with a reasonable amount
-of effort (less than 5000 seconds and generating a proof with less
-than 100 million clauses).  Only three solvers, all based on BDDs, can
-generate an unsatisfiability proof for any of the parity benchmarks.
-These are: PGPBS, PGBDD, and EBDDRES (developed by Jussila, Sinz, and
-Biere in 2006.)  Of these, PGPBS generates the shortest proofs.
-
 INSTRUCTIONS
 
 1. System Requirements (Tested with TACAS virtual environment)
@@ -73,6 +56,9 @@ INSTRUCTIONS
 
        * C compiler.  The LRAT checker is written in C.  Just about
          any compiler should work.  The default is gcc.
+
+       * An installation of pdflatex, along with the tikz graphics
+         package
 
 2. Installation
 
@@ -112,21 +98,7 @@ following:
 This will require many hours of execution on a well-resourced machine.
 
 
-3. Running the demo
-
-Once downloaded, the demonstration can be run as:
-
-   cd pgpbs-artifact
-   make demo
-
-When running the benchmarks, a lot of stuff gets printed, but the
-final summary information is saved in file results-pgpbs.txt in the
-top-level directory.  More information about the benchmarks is
-included in the README files for the two benchmark classes.  See the
-included file `artifact-documentation.pdf' for more information about
-the benchmarks and how to interpret the results.
-
-4. Other Makefile options:
+3. Other Makefile options:
 
 install:
   Compiles the LRAT checker.  No other installation steps are
@@ -134,17 +106,8 @@ install:
   reproduce' and other operations that require the proof checker.
 
 test:
-  Run simple examples of the two demonstration benchmarks classes.  A
-  lot of stuff gets printed out, but you should see the statement
-  `VERIFIED' for each benchmark.
-
-demo-pgbdd:
-  The parity problems can be solved using the earlier solver PGBDD.
-  The performance is not as good as PGPBS, but it's better than that
-  of any other known proof-generating SAT solver The results are saved
-  as the file results-pgbdd.txt.  The earlier solver EBDDRES should
-  have performance comparable to PGBDD, in terms of proof length, on
-  these benchmarks.
+  Run simple examples of the benchmarks.  A lot of stuff gets printed
+  out, but you should see the statement `VERIFIED' for each benchmark.
 
 test-pgbdd:
   Run simple examples with PGBDD
@@ -155,7 +118,7 @@ clean:
 superclean:
   Delete all generated files, including the demo and reproduced data
 
-5. Using PGBDD or PGPBS as standalone SAT solvers
+4. Using PGBDD or PGPBS as standalone SAT solvers
 
 The PGBDD and PGPBS SAT solvers are available as the programs pgbdd.py
 and pgpbs.py in the directory pgpbs-artifact/src. Their use is
