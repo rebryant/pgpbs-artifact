@@ -98,7 +98,7 @@ following:
 This will require many hours of execution on a well-resourced machine.
 
 
-3. Other Makefile options:
+4. Other Makefile options:
 
 install:
   Compiles the LRAT checker.  No other installation steps are
@@ -106,7 +106,7 @@ install:
   reproduce' and other operations that require the proof checker.
 
 test:
-  Run simple examples of the benchmarks.  A lot of stuff gets printed
+  Run simple examples of some benchmarks.  A lot of stuff gets printed
   out, but you should see the statement `VERIFIED' for each benchmark.
 
 test-pgbdd:

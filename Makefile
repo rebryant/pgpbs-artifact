@@ -7,27 +7,24 @@ reproduce-full: install
 install:
 	cd lrat; make install
 
-demo-pgbdd: install
-	cd benchmarks; make run-pgbdd
-	cp benchmarks/results-pgbdd.txt .
-	cat results-pgbdd.txt
-
 test: install
-	cd benchmarks; make test
+	cd demo; make test
 
 test-pgbdd: install
-	cd benchmarks; make test-pgbdd
+	cd demo; make test-pgbdd
 
 clean:
 	cd experimental-results; make clean
 	cd lrat; make clean
 	cd src; make clean
+	cd demo; make clean
 	rm -f *~ *results*.txt
 
 superclean:
 	cd experimental-results; make superclean
 	cd lrat; make clean
 	cd src; make clean
+	cd demo; make superclean
 	rm -f *~ *results*.txt
 	rm -f graphs.pdf
 
