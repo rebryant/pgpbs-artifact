@@ -265,6 +265,7 @@ class ConstraintFinder:
         # Encoding variables occur both positively and negatively
         # Build map from each encoding variable to the clauses that contain it
         evarMap = { var : [] for var in polarityDict.keys() if polarityDict[var] == (True,True) }
+
         # Build map from each program variable to the clauses that contain it
         pvarMap = { var : [] for var in polarityDict.keys() if polarityDict[var] == (False,True) }
         # Other variables
@@ -282,38 +283,40 @@ class ConstraintFinder:
                     evarMap[var].append(cid)
                 elif var in pvarMap:
                     pvarMap[var].append(cid)
+
         # Build up clusters, each containing set of encoding and program variables
         # Do so by following chains of encoding variables
         while len(evarMap) > 0:
-            # Maps from variables to True/False
-            pmap = {}
-            emap = {}
-            # Mapping from clause Ids to True/False
-            idmap = {}
+            # Sets of variables
+            pset = set([])
+            eset = set([])
+            # Set of clause IDs
+            idset = set([])
             # Grab an encoding variable as starting point
             for ev in evarMap.keys():
                 break
             traceList = [ev]
+            eset.add(ev)
             # Follow transitive closure from pairs of encoding variables
             while len(traceList) > 0:
                 ev = traceList[0]
                 traceList = traceList[1:]
-                emap[ev] = True
                 for cid in evarMap[ev]:
-                    idmap[cid] = True
+                    idset.add(cid)
                     clause = self.clauseDict[cid]
                     for lit in clause:
                         var = abs(lit)
-                        if var == ev or var in emap or var in pmap:
+                        if var == ev or var in eset or var in pset:
                             continue
                         if var in evarMap:
                             traceList.append(var)
+                            eset.add(var)
                         elif var in pvarMap:
-                            pmap[var] = True
+                            pset.add(var)
                 del evarMap[ev]
 
             # Now add remaining clauses that contain only variables in cluster
-            for pv in pmap.keys():
+            for pv in pset:
                 for cid in pvarMap[pv]:
                     if cid not in self.clauseDict:
                         continue
@@ -321,16 +324,16 @@ class ConstraintFinder:
                     inCluster = True
                     for lit in clause:
                         var = abs(lit)
-                        if var not in pmap and var not in emap:
+                        if var not in pset and var not in eset:
                             inCluster = False
                     if inCluster:
-                        idmap[cid] = True
+                        idset.add(cid)
 
-            varList = sorted(pmap.keys())
+            varList = sorted(pset)
             coeffList = [-1] * len(varList)
             const = -1
-            qvarList = sorted(emap.keys())
-            clauseList = sorted(idmap.keys())
+            qvarList = sorted(eset)
+            clauseList = sorted(idset)
             qschedule = self.linearizeSchedule(clauseList, qvarList)
             for cid in clauseList:
                 del self.clauseDict[cid]
